@@ -1,27 +1,172 @@
-# Mozuma-Oceanfront-Suites-Beyin
-Software Engineering project; building a fully functional website for Mozuma Oceanfront Suites@Beyin
-Client name:
+# 🏝️ Mozuma Oceanfront Suites
 
-#Team members-Roles:
-1.Malvin Elikem Samaru- Full Stack developer
-2.Esi Twi Tawia- Frontend Developer
-3.Yusif Ibrahim- Database Administrator
-4.Lydia Adjei- Quality Assurance Tester
-5.Samuel Atiapah- Project Manager
-6.Saviour Komla Mawutor Aryeevor- Backend Developer
-7.Revic Osei Owusu- DevOps Engineer
+**Software Engineering Group Project**  
+**Goal:** Build a fully functional promotional and booking website for *Mozuma Oceanfront Suites*, a 10-suite beachfront homestay located in Beyin, Ghana.
 
-PROJECT GOAL: building a fully functional website for Mozuma Oceanfront Suites@Beyin
+---
 
-CLIENT REQUUIREMENTS
-The client, Mozuma Oceanfront Suites@Beyin, has requested a website that:
-- Promotes a 10-suite oceanfront homestay, Airbnb, and timeshare property in Beyin, Ghana
-- Showcases room pricing (₵1000–₵3000/night), with discounts for longer stays(1 week or more)
-- Highlights exceptional cuisine: local, continental, and vegetarian meals (vegetables grown on-site)
-- Advertises private event hosting (e.g., weddings, gatherings)
-- Promotes local tourism: Nzulezo (village on stilts), Ankobra Beach, Maha Beach, Axim Beach, and Lou Moon
-- Emphasizes unique eco-tour experiences and nearby tennis court access
-- Includes a photo gallery (to be provided by the client)
-Property is located in Beyin, Western Region, Ghana. Approximately 2 hours from Takoradi, and 2.5 hours from Abidjan. Tours to Nzulezo (village on stilts), a 15-minute canoe ride from Beyin
+## 👥 Team Members & Roles
 
-The site will serve as an informative and promotional platform for guests, tourists, and event planners.
+|Team Members      | Role                    |
+|------------------|-------------------------|
+| Malvin Elikem    | Full Stack Developer    |
+| Esi Twi Tawia    | Frontend Developer      |
+| Savior ARYEEVOR  | Backend Developer       |
+| Yusif Ibrahim    | Database Administrator  |
+| Lydia Adjei      | Quality Assurance Tester|
+| Samuel Atiapah   | Project Manager         |
+| Revic Osei Owusu | DevOps Engineer         |
+
+---
+
+## 🎯 Project Objectives
+
+The client has requested a dynamic and user-friendly website that:
+
+- Promotes a **10-suite oceanfront** property combining homestay, Airbnb, and timeshare options.
+- Displays **room rates** ranging from **₵1000 to ₵3000 per night**, with **discounts** for stays of one week or more.
+- Highlights **exceptional cuisine**:
+  - Local, continental, and vegetarian meals (vegetables grown on-site).
+  - Breakfast included; lunch and dinner available for purchase.
+- Advertises **private event hosting**:
+  - Weddings, corporate retreats, gatherings (up to 1000 guests).
+  - On-site support: décor, food, sound systems.
+- Features **local tour packages**:
+  - Nzulezo (village on stilts), canoe rides, eco-tours.
+  - Group size: 10–20; includes meals, transport, guide, entry fees.
+  - Also promotes Ankobra Beach, Maha Beach, Axim Beach, and Lou Moon.
+- Includes **photo galleries**, **room descriptions**, and **facility info**.
+- Allows **bookings** via:
+  - Direct website
+  - Airbnb
+  - Booking.com
+
+---
+
+## 📍 Location
+
+- **Address**: Beyin, Western Region, Ghana  
+- ~2 hours from Takoradi  
+- ~2.5 hours drive from Abidjan, Ivory Coast  
+- 15-minute canoe ride to Nzulezo
+
+---
+
+## 🛏️ Property & Room Features
+
+- **WiFi**: Available in all rooms (free)
+- **Check-In**: 2:00 PM | **Check-Out**: 12:00 PM
+- **Cancellation Policy**: Varies by room type
+- **Amenities**:
+  - Private bathrooms with toiletries
+  - Flat-screen TV, air-conditioning, linen, wardrobe
+  - Breakfast included
+- **Meal Times**:
+  - Breakfast: 7:00am – 10:00am
+  - Lunch: 12:00pm – 4:00pm
+  - Dinner: 5:00pm – 10:00pm
+
+---
+
+## 💻 Tech Stack (Suggested)
+
+- **Frontend**: HTML, CSS, JavaScript (or React)
+- **Backend**: Node.js / PHP / Django
+- **Database**: MySQL
+- **Deployment**: GitHub + Netlify / Vercel
+- **Version Control**: Git & GitHub
+
+---
+
+## 📌 Next Steps
+
+- [ ] Finalize project scope and wireframes
+- [ ] Assign initial tasks and deadlines
+- [ ] Confirm database schema
+- [ ] Begin development and deployment
+# 🏝️ Mozuma Oceanfront Suites@Beyin
+
+**Software Engineering Group Project**  
+**Goal:** Build a fully functional promotional and booking website for *Mozuma Oceanfront Suites@Beyin*, a 10-suite beachfront homestay located in Beyin, Ghana.
+
+---
+
+## 👥 Team Members & Roles
+
+| Team Member | Role                     |
+|-------------|--------------------------|
+| Member 1    | Full Stack Developer     |
+| Member 2    | Frontend Developer       |
+| Member 3    | Backend Developer        |
+| Member 4    | Database Administrator   |
+| Member 5    | Quality Assurance Tester |
+| Member 6    | Project Manager          |
+| Member 7    | DevOps Engineer          |
+
+---
+
+## 🎯 Project Objectives
+
+The client has requested a dynamic and user-friendly website that:
+
+- Promotes a **10-suite oceanfront** property combining homestay, Airbnb, and timeshare options.
+- Displays **room rates** ranging from **₵1000 to ₵3000 per night**, with **discounts** for stays of one week or more.
+- Highlights **exceptional cuisine**:
+  - Local, continental, and vegetarian meals (vegetables grown on-site).
+  - Breakfast included; lunch and dinner available for purchase.
+- Advertises **private event hosting**:
+  - Weddings, corporate retreats, gatherings (up to 1000 guests).
+  - On-site support: décor, food, sound systems.
+- Features **local tour packages**:
+  - Nzulezo (village on stilts), canoe rides, eco-tours.
+  - Group size: 10–20; includes meals, transport, guide, entry fees.
+  - Also promotes Ankobra Beach, Maha Beach, Axim Beach, and Lou Moon.
+- Includes **photo galleries**, **room descriptions**, and **facility info**.
+- Allows **bookings** via:
+  - Direct website
+  - Airbnb
+  - Booking.com
+
+---
+
+## 📍 Location
+
+- **Address**: Beyin, Western Region, Ghana  
+- ~2 hours from Takoradi  
+- ~2.5 hours drive from Abidjan, Ivory Coast  
+- 15-minute canoe ride to Nzulezo
+
+---
+
+## 🛏️ Property & Room Features
+
+- **WiFi**: Available in all rooms (free)
+- **Check-In**: 2:00 PM | **Check-Out**: 12:00 PM
+- **Cancellation Policy**: Varies by room type
+- **Amenities**:
+  - Private bathrooms with toiletries
+  - Flat-screen TV, air-conditioning, linen, wardrobe
+  - Breakfast included
+- **Meal Times**:
+  - Breakfast: 7:00am – 10:00am
+  - Lunch: 12:00pm – 4:00pm
+  - Dinner: 5:00pm – 10:00pm
+
+---
+
+## 💻 Tech Stack (Suggested)
+
+- **Frontend**: HTML, CSS, JavaScript (or React)
+- **Backend**: Node.js / PHP / Django
+- **Database**: MySQL
+- **Deployment**: GitHub + Netlify / Vercel
+- **Version Control**: Git & GitHub
+
+---
+
+## 📌 Next Steps
+
+- [ ] Finalize project scope and wireframes
+- [ ] Assign initial tasks and deadlines
+- [ ] Confirm database schema
+- [ ] Begin development and deployment
