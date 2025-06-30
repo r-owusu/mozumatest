@@ -1,0 +1,43 @@
+
+
+:root {
+    --mz-color-1: #BCFBF8;
+    --mz-color-2: #FEFFD5;
+    --mz-color-3: #5C1717;
+    --mz-color-4: #68541B;
+    --mz-color-5: #D9C5C7;
+    --mz-color-6: #5C1717;
+    --mz-color-7: #03E9F1;
+    --mz-white: #FFFFFF;
+    --mz-black: #000000;
+}
+
+
+/* dummy css for wireframe */
+.section {
+    background-color: lightblue;
+    margin: 10px 0;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    background-color: green !important;
+    color: white;
+}
