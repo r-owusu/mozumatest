@@ -57,7 +57,8 @@ CREATE TABLE reviews (
 );
 
 
--- FOR TESTING 
+-- FOR TESTING // Here  temporarily
+
 INSERT INTO users (first_name, last_name, email, password, phone_number)
 VALUES ('Yusif', 'Ibrahim', 'yusiff@example.com', 'hashedpassword123', '0551234567');
 
