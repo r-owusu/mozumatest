@@ -1,22 +1,61 @@
 
 
 :root {
-    --mz-color-1: #BCFBF8;
-    --mz-color-2: #FEFFD5;
-    --mz-color-3: #5C1717;
-    --mz-color-4: #68541B;
-    --mz-color-5: #D9C5C7;
-    --mz-color-6: #5C1717;
-    --mz-color-7: #03E9F1;
+    --mz-blue-lighten: #BCFBF8;
+    --mz-bg-secondary: #FEFFD5;
+    --mz-brown: #5C1717;
+    --mz-brown-light: #68541B;
+    --mz-bg-tertiary: #D9C5C7;
+    --mz-blue: #03E9F1;
     --mz-white: #FFFFFF;
     --mz-black: #000000;
+
+}
+
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+a {
+    text-decoration: none;
+}
+button {
+    background-color: var(--mz-blue);
+    color: var(--mz-white);
+    border-radius: 5px;
+    padding: 8px 25px;
+    font-size: 20px;
+    border: none;
+}
+
+@font-face {
+    font-family: "Cinzel";
+    src: url('./fonts/CinzelDecorative-Black.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cinzel";
+    src: url('./fonts/CinzelDecorative-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cinzel";
+    src: url('./fonts/CinzelDecorative-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 
 
 /* dummy css for wireframe */
 .section {
     background-color: lightblue;
-    margin: 10px 0;
+    border: 3px solid black;
     width: 100%;
     height: 40vh;
     display: flex;
@@ -41,3 +80,187 @@
     background-color: green !important;
     color: white;
 }
+
+
+/*-----------------------------------header  */
+header {
+    background-color: var(--mz-blue-lighten);
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0;
+    z-index: 100;
+    padding: 5px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav {
+    width: 40%;
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding-top: 15px;
+}
+header nav ul li {
+    list-style-type: none;
+}
+header nav ul li a {
+    color: var(--mz-black);
+    font-size: 18px;
+    font-weight: bold;
+}
+header .active {
+    background-color: var(--mz-blue);
+    padding: 7px 20px;
+    border-radius: 7px;
+}
+
+
+/*-----------------------------------home page  */
+/* ----------welcome */
+.home-welcome {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.home-welcome video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.home-welcome-info {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-welcome-info div {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 40%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 8px;
+}
+.home-welcome-info div h1 {
+    font-family: "Cinzel";
+    font-weight: 700;
+    font-size: 30;
+    color: var(--mz-blue);
+}
+.home-welcome-info div h3 {
+    font-size: 50px;
+    margin: 20px 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.home-welcome-info div p {
+    color: var(--mz-blue);
+    font-size: 20px;
+    margin-top: 30px;
+    letter-spacing: 4px;
+}
+
+/*-----------------------------------home page  */
+/* ----------about */
+.home-about {
+    background: url('../assets/images/home/suites-main.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.home-about div {
+    background-color: var(--mz-bg-secondary);
+    border-radius: 15px;
+    width: 35%;
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 2%;
+}
+.home-about div h3 {
+    font-size: 24px;
+    color: gray;
+    font-weight: bold;
+    margin: 28px 0;
+}
+.home-about div h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+/*-----------------------------------home page  */
+/* ----------cuisine */
+.h-cuisine {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--mz-bg-secondary);
+
+}
+.h-cuisine-header h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+    font-size: 54px;
+}
+.h-cuisine-header div {
+    display: flex;
+    gap: 10px; 
+    align-items: center;
+    justify-content: center;
+    margin-top: -16px;
+}
+.h-cuisine-header div hr {
+    background-color: var(--mz-brown);
+    height: 4px;
+    width: 40%;
+}
+.h-cuisine-header div img {
+    width: 20px;
+}
+.h-cuisine-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 35px;
+}
+.h-cuisine-info .inner {
+    display: flex;
+    gap: 40px;
+
+
+}
+.h-cuisine-info .inner img {
+    width: 300px;
+    height: 350px;
+    
+}
+.h-cuisine-info .inner div {
+    width: 250px;
+    font-size: 18px;
+}
+
+.h-cuisine img {
+    width: 200px;
+    border-radius: 10px;
+}
+
