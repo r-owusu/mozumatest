@@ -239,15 +239,12 @@ header .active {
 }
 .h-cuisine-info {
     display: flex;
-    align-items: center;
     gap: 15px;
     margin-top: 35px;
 }
 .h-cuisine-info .inner {
     display: flex;
     gap: 40px;
-
-
 }
 .h-cuisine-info .inner img {
     width: 300px;
@@ -255,12 +252,53 @@ header .active {
     
 }
 .h-cuisine-info .inner div {
-    width: 250px;
-    font-size: 18px;
+    width: 270px;
+    font-size: 20px;
 }
-
+.h-cuisine-img  {
+    display: flex;
+    align-items: end;
+}
+.h-cuisine-img img {
+    width: 250px;
+    margin-bottom: -40px;
+}
 .h-cuisine img {
-    width: 200px;
     border-radius: 10px;
 }
+.h-cuisine-info button {
+    margin-top: 30px;
+}
 
+
+/*-----------------------------------home page  */
+/* ----------events */
+.h-event {
+    height: 80vh;
+    background: url('../assets/images/home/beach-1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.h-event div {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.h-event div h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: var(--mz-white); 
+    font-size: 50px; 
+}
+
+
+/*-----------------------------------footer  */
+
+
+footer a img {
+    width: 200px;
+}

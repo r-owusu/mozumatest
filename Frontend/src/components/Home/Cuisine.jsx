@@ -29,7 +29,7 @@ const Cuisine = () => {
           <button>Visit Restaurant</button>
         </div>
 
-        <div>
+        <div className='h-cuisine-img'>
           <img src='../../assets/images/home/food-1.jpg' />
         </div>
       </div>
