@@ -1,24 +1,24 @@
-name: Django Backend CI
+GitHub Actions Workflow: backend-ci.yml
+
+name: Django CI
 
 on:
   push:
-    paths:
-      - 'Backend/**'
+    branches: [ backend ]
   pull_request:
-    paths:
-      - 'Backend/**'
+    branches: [ backend ]
 
 jobs:
-  test-backend:
+  build:
     runs-on: ubuntu-latest
 
     services:
       postgres:
         image: postgres:13
         env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
           POSTGRES_DB: test_db
-          POSTGRES_USER: user
-          POSTGRES_PASSWORD: password
         ports:
           - 5432:5432
         options: >-
@@ -28,8 +28,7 @@ jobs:
           --health-retries 5
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -38,19 +37,16 @@ jobs:
 
     - name: Install dependencies
       run: |
-        cd Backend
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run Django tests
+    - name: Run tests
       env:
         DB_NAME: test_db
-        DB_USER: user
-        DB_PASSWORD: password
+        DB_USER: postgres
+        DB_PASSWORD: postgres
         DB_HOST: localhost
         DB_PORT: 5432
       run: |
-        cd Backend
         python manage.py test
-
 
