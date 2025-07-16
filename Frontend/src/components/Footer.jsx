@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <footer>
-      <div>
+      <div className='main'>
+        {/* navigations */}
         <nav>
           <ul>
             <li><Link to=''>About</Link></li>
@@ -13,9 +14,20 @@ const Footer = () => {
           </ul>
         </nav>
 
-        <div></div>
+        {/* logo and documents */}
+        <div className='center'>
+          <img src='../../assets/images/logo.jpg'/>
 
-        <div>
+          <nav>
+            <ul>
+              <li><a href='#'>Privacy Policy</a></li>
+              <li><a href='#'>Terms and Conidtions</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        {/* details */}
+        <div className='details'>
           <h1>Need more information? <br /> contact us</h1>
           <p>Phone: 1214235343242</p>
           <p>Email: mozuma@gmail.com</p>
@@ -28,15 +40,15 @@ const Footer = () => {
               </li>
 
               <li>
-                <a href=''><img src='' /></a>
+                <a href=''><img src='../../assets/icons/twitter.svg' /></a>
               </li>
 
               <li>
-                <a href=''><img src='' /></a>
+                <a href=''><img src='../../assets/icons/instagram.svg' /></a>
               </li>
 
               <li>
-                <a href=''><img src='' /></a>
+                <a href=''><img src='../../assets/icons/linkedin.svg' /></a>
               </li>
 
             </ul>
@@ -44,7 +56,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div>
+      <div className='bottom'>
         <p>@ 2025 Mozuma Hotel | All rights reserved</p>
       </div>
     </footer>

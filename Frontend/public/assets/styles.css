@@ -95,7 +95,6 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
 header nav {
     width: 40%;
 }
@@ -117,6 +116,9 @@ header .active {
     background-color: var(--mz-blue);
     padding: 7px 20px;
     border-radius: 7px;
+}
+header img {
+    width: 50px;
 }
 
 
@@ -275,7 +277,7 @@ header .active {
 /* ----------events */
 .h-event {
     height: 80vh;
-    background: url('../assets/images/home/beach-1.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/home/beach-1.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -295,10 +297,121 @@ header .active {
     font-size: 50px; 
 }
 
+/*-----------------------------------home page  */
+/* ----------suites */
+.suites-container {
+    height: 110vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #e9fffe;
+}
+.suites-container h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+.suites {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    padding: 20px 10%;
+}
+.suite {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.suite div {
+    margin-top: 10px;
+}
+.suite div h2 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--mz-brown);
+    margin: 10px 0 -2px 0;
+}
+.suite div p span {
+    font-weight: bold;
+    color: var(--mz-brown-light);
+    font-size: 20px;
+    font-weight: bold;
+}
+.suite img {
+    width: 320px;
+    height: 340px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.35);
+}
+.suites-container button {
+    color: black !important;
+    font-weight: bold;
+    margin-top: 30px;
+}
+/*-----------------------------------home page  */
+/* ----------map */
+.map-container {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /*-----------------------------------footer  */
-
-
+footer {
+    background: linear-gradient(to bottom, var(--mz-bg-tertiary) 0%, var(--mz-bg-tertiary) 20%, var(--mz-blue-lighten) 50%, var(--mz-bg-tertiary) 90%, var(--mz-bg-tertiary) 100%);
+}
+footer li {
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+footer a {
+    color: var(--mz-black);
+    font-size: 18px;
+}
 footer a img {
+    width: 25px;
+}
+footer .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20%; 
+    padding: 70px 1% 70px 3%;
+}
+footer .center img {
     width: 200px;
+    height: 180px;
+    border-radius: 15px;
+    margin: 0 0 8px 30%;
+}
+
+footer .bottom {
+    padding: 27px 4% 12px 4%;
+    border-top: 1px solid var(--mz-bg-secondary);
+}
+footer .bottom p {
+    margin: 0;
+}
+footer .details h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+footer .details p {
+    margin: 15px 0;
+}
+footer .details nav ul {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-left: -30px;
 }
