@@ -85,5 +85,5 @@ The client has requested a dynamic and user-friendly website that:
 - [ ] Finalize project scope and wireframes
 - [ ] Assign initial tasks and deadlines
 - [ ] Confirm database schema
-- [ ] Begin development and deployment
+- [ ] Begin development and deployment.
 
