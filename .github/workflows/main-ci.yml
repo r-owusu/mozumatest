@@ -1,0 +1,73 @@
+name: Unified Frontend & Backend CI/CD
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: testdb
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping --silent"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python for Backend
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Backend - Install dependencies (if available)
+        run: |
+          if [ -f ./Backend/requirements.txt ]; then
+            pip install -r ./Backend/requirements.txt
+          else
+            echo "No requirements.txt found in Backend folder."
+          fi
+
+      - name: Backend - Run Django tests (if manage.py exists)
+        run: |
+          if [ -f ./Backend/manage.py ]; then
+            cd Backend
+            python manage.py test
+          else
+            echo "No manage.py found in Backend folder."
+          fi
+
+      - name: Set up Node.js for Frontend
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Frontend - Install dependencies
+        run: |
+          if [ -f ./Frontend/package.json ]; then
+            cd Frontend
+            npm install
+          else
+            echo "No package.json found in Frontend folder."
+          fi
+
+      - name: Frontend - Build project
+        run: |
+          if [ -f ./Frontend/package.json ]; then
+            cd Frontend
+            npm run build
+          else
+            echo "No package.json found to build Frontend."
+          fi
