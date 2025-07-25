@@ -2,8 +2,7 @@ name: Unified Frontend & Backend CI/CD
 
 on:
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   test:
@@ -15,8 +14,7 @@ jobs:
         env:
           MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: testdb
-        ports:
-          - 3306:3306
+        ports: [3306:3306]
         options: >-
           --health-cmd="mysqladmin ping --silent"
           --health-interval=10s
@@ -25,49 +23,38 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Set up Python for Backend
+      # Backend Setup & Test (Python/Django)
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: Backend - Install dependencies (if available)
-        run: |
-          if [ -f ./Backend/requirements.txt ]; then
-            pip install -r ./Backend/requirements.txt
-          else
-            echo "No requirements.txt found in Backend folder."
-          fi
+      - name: Install Backend Dependencies
+        if: contains(steps.checkout.outputs.path, 'Backend/requirements.txt')
+        run: pip install -r ./Backend/requirements.txt
 
-      - name: Backend - Run Django tests (if manage.py exists)
+      - name: Run Django Tests
+        if: contains(steps.checkout.outputs.path, 'Backend/manage.py')
         run: |
-          if [ -f ./Backend/manage.py ]; then
-            cd Backend
-            python manage.py test
-          else
-            echo "No manage.py found in Backend folder."
-          fi
+          cd Backend
+          python manage.py test
 
-      - name: Set up Node.js for Frontend
+      # Frontend Setup & Build (Node.js)
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: Frontend - Install dependencies
+      - name: Install Frontend Dependencies
+        if: contains(steps.checkout.outputs.path, 'Frontend/package.json')
         run: |
-          if [ -f ./Frontend/package.json ]; then
-            cd Frontend
-            npm install
-          else
-            echo "No package.json found in Frontend folder."
-          fi
+          cd Frontend
+          npm install
 
-      - name: Frontend - Build project
+      - name: Build Frontend
+        if: contains(steps.checkout.outputs.path, 'Frontend/package.json')
         run: |
-          if [ -f ./Frontend/package.json ]; then
-            cd Frontend
-            npm run build
-          else
-            echo "No package.json found to build Frontend."
-          fi
+          cd Frontend
+          npm run build
