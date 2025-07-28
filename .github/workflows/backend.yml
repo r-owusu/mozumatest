@@ -1,24 +1,49 @@
-name: Backend CI/CD
+name: CI/CD Pipeline
 
 on:
-  pull_request:
-    branches:
-      - main
   push:
-    branches:
-      - backend
+    branches: [ main, dev, feature/* ]  # Triggers on main, dev, and feature branches
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  build:
+  frontend-ci:
+    name: React Frontend CI
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend  # All steps run in frontend dir
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - name: Checkout the backend branch
-        run: git checkout backend
+      # Install Node.js and frontend dependencies
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
 
+      - name: Install npm dependencies
+        run: npm install
+
+      # Run tests and build
+      - name: Run frontend tests
+        run: npm test
+
+      - name: Build production bundle
+        run: npm run build
+
+  backend-ci:
+    name: Django Backend CI
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./backend  # All steps run in backend dir
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Set up Python and Django
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -26,9 +51,25 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt  # No need to specify "backend/requirements.txt" since it's in the root of the backend branch.
+          pip install -r requirements.txt
+          pip install pytest
 
-      - name: Run tests
+      # Run migrations and tests
+      - name: Run Django tests
+        run: python manage.py test
+
+  merge-safety-check:
+    name: Merge Safety Check
+    needs: [frontend-ci, backend-ci]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'  # Only run on main branch
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Verify frontend and backend can coexist
+      - name: Validate integration
         run: |
-          python manage.py test
+          ls ./frontend/build  # Ensure frontend built
+          ls ./backend/manage.py  # Ensure backend exists
+          echo "Integration check passed!"
