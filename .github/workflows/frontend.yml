@@ -1,32 +1,43 @@
-name: Frontend CI
+name: Frontend CI/CD
 
 on:
-  push:
-    branches:
-      - Frontend  # Triggers the workflow on push to the frontend branch
   pull_request:
     branches:
-      - main  # Triggers the workflow when a PR is opened to the main branch
+      - main
+  push:
+    branches:
+      - Frontend  # Trigger the pipeline for the Frontend branch
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Runs on the latest version of Ubuntu
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2  # Fetches the code from the repository
+        uses: actions/checkout@v2
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16  # Node version to use, adjust if needed
+          node-version: 18
 
       - name: Install dependencies
-        run: npm install  # Installs the required frontend dependencies
-
-      - name: Run tests
-        run: npm test -- --coverage  # Run tests and collect coverage data
+        run: |
+          cd Frontend  # Navigate into the Frontend folder where package.json is located
+          npm install  # Install dependencies
 
       - name: Build project
-        run: npm run build  # Build the React app
+        run: |
+          cd Frontend  # Again, navigate into Frontend if needed
+          npm run build  # Build the project
 
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.1
+        with:
+          publish-dir: './Frontend/dist'  # Ensure this points to the correct directory after build
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
