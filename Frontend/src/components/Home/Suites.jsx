@@ -18,7 +18,7 @@ const Suites = () => {
         </div>
 
         <div className="suite">
-          <img src="../../assets/images/suites/hotel-18.jpg" alt="Suite 1" />
+          <img src="../../assets/images/suites/suite-6.jpg" alt="Suite 1" />
 
           <div>
             <h2>Outdoor Suite</h2>
@@ -28,7 +28,7 @@ const Suites = () => {
         </div>
 
         <div className="suite">
-          <img src="../../assets/images/suites/room-2.jpg" alt="Suite 1" />
+          <img src="../../assets/images/suites/suite-2.jpg" alt="Suite 1" />
 
           <div>
             <h2>Luxury Suite</h2>

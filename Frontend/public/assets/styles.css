@@ -51,6 +51,28 @@ button {
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Montserrat";
+    src: url('./fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('./fonts/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('./fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
 
 /* dummy css for wireframe */
 .section {
@@ -94,6 +116,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid var(--mz-black);
 }
 header nav {
     width: 40%;
@@ -364,6 +387,88 @@ header img {
     justify-content: center;
 }
 
+/*-----------------------------------suites page  */
+/* ----------starter */
+.suites-main {
+    background-color: var(--mz-blue-lighten);
+}
+.suites-main .starter {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10vh;
+}
+.suites-main .starter div h1 {
+    font-size: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.suites-main .starter div p {
+    font-size: 20px;
+    margin-top: 40px;
+}
+.suites-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12vh; 
+    padding-bottom: 10vh;
+}
+.suite-inner {
+    background-color: white;
+    width: 60%;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    gap: 5%;
+}
+.suite-inner h1 {
+    text-transform: uppercase;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+}
+.suite-inner .suite-img {
+    width: 400px;
+    height: 45vh;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.suite-inner .icons {
+    display: flex;
+    align-items: center;
+    gap: 140px;
+    margin: 15px 0 30px 0;
+}
+.suite-inner .icons div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.suite-inner .icons div p {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+}
+.suite-inner .info img {
+    width: 30px;
+    height: 30px;
+}
+.suite-button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 25px;
+}
+.suite-inner .info {
+    padding-top: 40px;
+}
+.suite-desc {
+    width: 80%;
+    font-size: 18px;
+}
+
 
 /*-----------------------------------footer  */
 footer {
@@ -415,3 +520,45 @@ footer .details nav ul {
     gap: 18px;
     margin-left: -30px;
 }
+
+/*-----------------------------------error page  */
+.error-page {
+    background-color: var(--mz-blue-lighten);
+    height: 85vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+.error-inner {
+    width: 80%;
+}
+.error-head p {
+    color: var(--mz-bg-tertiary);
+    font-size: 18px;
+    text-align-last: left;
+}
+.error-head p span {
+    color: var(--mz-black)
+}
+.error-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px; 
+    margin-top: 6vh;
+}
+.error-info h1 {
+    font-size: 150px;
+}
+.error-info p {
+    font-size: 18px;
+}
+.error-info a {
+    background-color: rgb(216, 71, 71);
+    padding: 15px 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+}
+
