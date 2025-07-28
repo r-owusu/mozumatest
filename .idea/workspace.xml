@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed06f97c-899d-43a9-9517-86b66cf672de" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +42,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Test",
+    "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/revic/OneDrive/Desktop/Mozuma-Oceanfront-Suites-Beyin",
     "node.js.detected.package.eslint": "true",
@@ -69,6 +70,7 @@
       <updated>1752701961169</updated>
       <workItem from="1752701962542" duration="3655000" />
       <workItem from="1752867063765" duration="107000" />
+      <workItem from="1753718038896" duration="1955000" />
     </task>
     <servers />
   </component>
