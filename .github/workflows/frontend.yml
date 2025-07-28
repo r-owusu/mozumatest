@@ -1,12 +1,12 @@
 name: Frontend CI/CD
 
 on:
-  push:
-    branches:
-      - Frontend
   pull_request:
     branches:
-      - main
+      - main  # Trigger on any PR to the main branch
+    paths:
+      - 'Frontend/**'  # Optionally, include only frontend files
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: 18
 
       - name: Install dependencies
         run: npm install
@@ -29,9 +29,10 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.1
         with:
-          publish-dir: './build'
+          publish-dir: './dist'
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
