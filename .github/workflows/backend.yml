@@ -1,15 +1,14 @@
-name: Backend CI
+name: Backend CI/CD
 
 on:
-  push:
-    branches:
-      - backend
   pull_request:
     branches:
-      - main
+      - main  # Trigger on any PR to the main branch
+    paths:
+      - 'backend/**'  # Optionally, include only backend files
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     services:
@@ -38,9 +37,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip  # Upgrade pip
-          pip install -r requirements.txt  # Install the dependencies from requirements.txt
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Run tests
         run: |
-          python manage.py test  # Run Django tests
+          python manage.py test
