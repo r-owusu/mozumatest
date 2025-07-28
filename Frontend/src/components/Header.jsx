@@ -3,8 +3,9 @@ import { NavLink, Link } from 'react-router-dom'
 const Header = () => {
   return (
     <header>
-      <Link to='/'>
-        <img src='../../assets/images/logo.jpg' alt='Mozuma Logo'/>
+      <Link to='/' className='header-logo'>
+        <img src='../../assets/images/logo.jpg' alt='Mozuma Logo' />
+        <h1>Mozuma OceanFront Suites</h1>
       </Link>
 
       <nav>
@@ -16,6 +17,8 @@ const Header = () => {
           <li><NavLink to='/restaurant' className={({ isActive }) => isActive ? 'active' : ''}>Restaurant</NavLink></li>
 
           <li><NavLink to='/tours' className={({ isActive }) => isActive ? 'active' : ''}>Tours</NavLink></li>
+
+          <li><NavLink to='/tours' className={({ isActive }) => isActive ? 'active' : ''}>LogIn</NavLink></li>
         </ul>
       </nav>
     </header>

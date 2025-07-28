@@ -118,6 +118,18 @@ header {
     justify-content: space-between;
     border-bottom: 1px solid var(--mz-black);
 }
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.header-logo h1 {
+    font-family: "Cinzel";
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--mz-black);
+    margin: 0;
+}
 header nav {
     width: 40%;
 }
