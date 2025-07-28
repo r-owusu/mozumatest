@@ -76,7 +76,7 @@ The client has requested a dynamic and user-friendly website that:
 - **Backend**: Node.js / PHP / Django
 - **Database**: MySQL
 - **Deployment**: GitHub + Netlify / Vercel
-- **Version Control**: Git & GitHub.
+- **Version Control**: Git & GitHub
 
 ---
 
