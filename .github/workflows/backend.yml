@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install -r backend/requirements.txt
+          pip install -r requirements.txt  # No need to specify "backend/requirements.txt" since it's in the root of the backend branch.
 
       - name: Run tests
         run: |
