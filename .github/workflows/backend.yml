@@ -1,41 +1,34 @@
-name: Backend CI
+name: Backend CI/CD
 
 on:
-  push:
-    branches:
-      - backend  # Triggers the workflow on push to the backend branch
   pull_request:
     branches:
-      - main  # Triggers the workflow when a PR is opened to the main branch
+      - main
+  push:
+    branches:
+      - backend
 
 jobs:
-  test:
-    runs-on: ubuntu-latest  # Runs on the latest version of Ubuntu
-
-    services:
-      postgres:
-        image: postgres:12  # Running PostgreSQL service for database-related tests
-        ports:
-          - 5432:5432
-        env:
-          POSTGRES_USER: user
-          POSTGRES_PASSWORD: password
-          POSTGRES_DB: testdb
+  build:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2  # Fetches the code from the repository
+        uses: actions/checkout@v2
+
+      - name: Checkout the backend branch
+        run: git checkout backend
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'  # Python version to use
+          python-version: '3.10'
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt  # Install Python dependencies for the backend
+          pip install --upgrade pip
+          pip install -r backend/requirements.txt
 
       - name: Run tests
-        run: python manage.py test  # Run Django tests to verify backend functionality
-
+        run: |
+          python manage.py test
