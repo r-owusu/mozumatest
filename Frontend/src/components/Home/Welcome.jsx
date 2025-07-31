@@ -4,7 +4,7 @@ const Welcome = () => {
   return (
     <div className='home-welcome'>
       <video autoPlay loop muted playsInline>
-        <source src='../../assets/images/home/intro-video.mp4' type='video/mp4' />
+        <source src='../../assets/images/HOME/intro-video.mp4' type='video/mp4' />
       </video>
 
 
