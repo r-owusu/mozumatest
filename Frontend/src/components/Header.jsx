@@ -18,7 +18,7 @@ const Header = () => {
 
           <li><NavLink to='/tours' className={({ isActive }) => isActive ? 'active' : ''}>Tours</NavLink></li>
 
-          <li><NavLink to='/tours' className={({ isActive }) => isActive ? 'active' : ''}>LogIn</NavLink></li>
+          <li><NavLink to='/login' className={({ isActive }) => isActive ? 'active' : ''}>LogIn</NavLink></li>
         </ul>
       </nav>
     </header>
