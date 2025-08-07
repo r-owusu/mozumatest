@@ -1,0 +1,32 @@
+name: Frontend CI/CD
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - Frontend  # Trigger the pipeline for the Frontend branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: |
+          cd Frontend  # Navigate into the Frontend folder where package.json is located
+          npm install  # Install dependencies
+
+      - name: Build project
+        run: |
+          cd Frontend  # Again, navigate into Frontend if needed
+          npm run build  # Build the project

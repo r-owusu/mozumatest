@@ -4,7 +4,7 @@
 ---
 **Goal:** Build a fully functional promotional and booking website for *Mozuma Oceanfront Suites*, a 10-suite beachfront homestay located in Beyin, Ghana.
 ---
-Client name: EUNICE TUMI.
+Client name: EUNICE TUMI
 ---
 
 ## 👥 Team Members & Roles
@@ -85,5 +85,5 @@ The client has requested a dynamic and user-friendly website that:
 - [ ] Finalize project scope and wireframes
 - [ ] Assign initial tasks and deadlines
 - [ ] Confirm database schema
-- [ ] Begin development and deployment
+- [ ] Begin development and deployment.
 
