@@ -1,21 +1,27 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div>
-      <Link to='/'>Header</Link>
+    <header>
+      <Link to='/' className='header-logo'>
+        <img src='../../assets/images/logo.jpg' alt='Mozuma Logo' />
+        <h1>Mozuma OceanFront Suites</h1>
+      </Link>
 
       <nav>
         <ul>
-          <li><Link to='/events'>Events</Link></li>
-          <li><Link to='/restaurant'>Restaurant</Link></li>
-          <li><Link to='/tours'>Tours</Link></li>
-          <li><Link to='/login'>Login</Link></li>
+          <li><NavLink to='/suites' className={({ isActive }) => isActive ? 'active' : ''}>Suites</NavLink></li>
+
+          <li><NavLink to='/events' className={({ isActive }) => isActive ? 'active' : ''}>Events</NavLink></li>
+
+          <li><NavLink to='/restaurant' className={({ isActive }) => isActive ? 'active' : ''}>Restaurant</NavLink></li>
+
+          <li><NavLink to='/tours' className={({ isActive }) => isActive ? 'active' : ''}>Tours</NavLink></li>
+
+          <li><NavLink to='/login' className={({ isActive }) => isActive ? 'active' : ''}>LogIn</NavLink></li>
         </ul>
       </nav>
-
-    </div>
+    </header>
   )
 }
 

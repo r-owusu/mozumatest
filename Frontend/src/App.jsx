@@ -15,7 +15,9 @@ import Events from './pages/Events'
 import Booking from './pages/Booking'
 import Login from './components/authenticaton/Login'
 import Signup from './components/authenticaton/Signup'
-
+import Suites from './pages/Suites'
+import ErrorPage from './pages/ErrorPage'
+import About from './pages/About'
 
 function App() {
 
@@ -27,10 +29,13 @@ function App() {
         <Route path='/' element={<Home />}/>
         <Route path='/restaurant' element={<Restaurant />}/>
         <Route path='/tours' element={<Tours />}/>
+        <Route path='/suites' element={<Suites />}/>
         <Route path='/events' element={<Events />}/>
         <Route path='/booking' element={<Booking />}/>
         <Route path='/signup' element={<Signup />}/>
         <Route path='/login' element={<Login />}/>
+         <Route path='/about' element={<About />} />
+        <Route path='*' element={<ErrorPage />}/>
       </Routes>
       
       <Footer />

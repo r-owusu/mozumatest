@@ -1,22 +1,83 @@
 
 
 :root {
-    --mz-color-1: #BCFBF8;
-    --mz-color-2: #FEFFD5;
-    --mz-color-3: #5C1717;
-    --mz-color-4: #68541B;
-    --mz-color-5: #D9C5C7;
-    --mz-color-6: #5C1717;
-    --mz-color-7: #03E9F1;
+    --mz-blue-lighten: #BCFBF8;
+    --mz-bg-secondary: #FEFFD5;
+    --mz-brown: #5C1717;
+    --mz-brown-light: #68541B;
+    --mz-bg-tertiary: #D9C5C7;
+    --mz-blue: #03E9F1;
     --mz-white: #FFFFFF;
     --mz-black: #000000;
+
 }
+
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+a {
+    text-decoration: none;
+}
+button {
+    background-color: var(--mz-blue);
+    color: var(--mz-white);
+    border-radius: 5px;
+    padding: 8px 25px;
+    font-size: 20px;
+    border: none;
+}
+
+@font-face {
+    font-family: "Cinzel";
+    src: url('./fonts/CinzelDecorative-Black.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cinzel";
+    src: url('./fonts/CinzelDecorative-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cinzel";
+    src: url('./fonts/CinzelDecorative-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('./fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('./fonts/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('./fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 
 
 /* dummy css for wireframe */
 .section {
     background-color: lightblue;
-    margin: 10px 0;
+    border: 3px solid black;
     width: 100%;
     height: 40vh;
     display: flex;
@@ -41,3 +102,475 @@
     background-color: green !important;
     color: white;
 }
+
+
+/*-----------------------------------header  */
+header {
+    background-color: var(--mz-blue-lighten);
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0;
+    z-index: 100;
+    padding: 5px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--mz-black);
+}
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.header-logo h1 {
+    font-family: "Cinzel";
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--mz-black);
+    margin: 0;
+}
+header nav {
+    width: 40%;
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding-top: 15px;
+}
+header nav ul li {
+    list-style-type: none;
+}
+header nav ul li a {
+    color: var(--mz-black);
+    font-size: 18px;
+    font-weight: bold;
+}
+header .active {
+    background-color: var(--mz-blue);
+    padding: 7px 20px;
+    border-radius: 7px;
+}
+header img {
+    width: 50px;
+}
+
+
+/*-----------------------------------home page  */
+/* ----------welcome */
+.home-welcome {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.home-welcome video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.home-welcome-info {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-welcome-info div {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 40%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 8px;
+}
+.home-welcome-info div h1 {
+    font-family: "Cinzel";
+    font-weight: 700;
+    font-size: 30;
+    color: var(--mz-blue);
+}
+.home-welcome-info div h3 {
+    font-size: 50px;
+    margin: 20px 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.home-welcome-info div p {
+    color: var(--mz-blue);
+    font-size: 20px;
+    margin-top: 30px;
+    letter-spacing: 4px;
+}
+
+/*-----------------------------------home page  */
+/* ----------about */
+.home-about {
+    background: url('../assets/images/home/suites-main.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.home-about div {
+    background-color: var(--mz-bg-secondary);
+    border-radius: 15px;
+    width: 35%;
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 2%;
+}
+.home-about div h3 {
+    font-size: 24px;
+    color: gray;
+    font-weight: bold;
+    margin: 28px 0;
+}
+.home-about div h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+/*-----------------------------------home page  */
+/* ----------cuisine */
+.h-cuisine {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--mz-bg-secondary);
+
+}
+.h-cuisine-header h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+    font-size: 54px;
+}
+.h-cuisine-header div {
+    display: flex;
+    gap: 10px; 
+    align-items: center;
+    justify-content: center;
+    margin-top: -16px;
+}
+.h-cuisine-header div hr {
+    background-color: var(--mz-brown);
+    height: 4px;
+    width: 40%;
+}
+.h-cuisine-header div img {
+    width: 20px;
+}
+.h-cuisine-info {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+.h-cuisine-info .inner {
+    display: flex;
+    gap: 40px;
+}
+.h-cuisine-info .inner img {
+    width: 300px;
+    height: 350px;
+    
+}
+.h-cuisine-info .inner div {
+    width: 270px;
+    font-size: 20px;
+}
+.h-cuisine-img  {
+    display: flex;
+    align-items: end;
+}
+.h-cuisine-img img {
+    width: 250px;
+    margin-bottom: -40px;
+}
+.h-cuisine img {
+    border-radius: 10px;
+}
+.h-cuisine-info button {
+    margin-top: 30px;
+}
+
+
+/*-----------------------------------home page  */
+/* ----------events */
+.h-event {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/home/beach-1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.h-event div {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.h-event div h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: var(--mz-white); 
+    font-size: 50px; 
+}
+
+/*-----------------------------------home page  */
+/* ----------suites */
+.suites-container {
+    height: 110vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #e9fffe;
+}
+.suites-container h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+.suites {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    padding: 20px 10%;
+}
+.suite {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.suite div {
+    margin-top: 10px;
+}
+.suite div h2 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--mz-brown);
+    margin: 10px 0 -2px 0;
+}
+.suite div p span {
+    font-weight: bold;
+    color: var(--mz-brown-light);
+    font-size: 20px;
+    font-weight: bold;
+}
+.suite img {
+    width: 320px;
+    height: 340px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.35);
+}
+.suites-container button {
+    color: black !important;
+    font-weight: bold;
+    margin-top: 30px;
+}
+/*-----------------------------------home page  */
+/* ----------map */
+.map-container {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*-----------------------------------suites page  */
+/* ----------starter */
+.suites-main {
+    background-color: var(--mz-blue-lighten);
+}
+.suites-main .starter {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10vh;
+}
+.suites-main .starter div h1 {
+    font-size: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.suites-main .starter div p {
+    font-size: 20px;
+    margin-top: 40px;
+}
+.suites-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12vh; 
+    padding-bottom: 10vh;
+}
+.suite-inner {
+    background-color: white;
+    width: 60%;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    gap: 5%;
+}
+.suite-inner h1 {
+    text-transform: uppercase;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+}
+.suite-inner .suite-img {
+    width: 400px;
+    height: 45vh;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.suite-inner .icons {
+    display: flex;
+    align-items: center;
+    gap: 140px;
+    margin: 15px 0 30px 0;
+}
+.suite-inner .icons div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.suite-inner .icons div p {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+}
+.suite-inner .info img {
+    width: 30px;
+    height: 30px;
+}
+.suite-button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 25px;
+}
+.suite-inner .info {
+    padding-top: 40px;
+}
+.suite-desc {
+    width: 80%;
+    font-size: 18px;
+}
+
+
+/*-----------------------------------footer  */
+footer {
+    background: linear-gradient(to bottom, var(--mz-bg-tertiary) 0%, var(--mz-bg-tertiary) 20%, var(--mz-blue-lighten) 50%, var(--mz-bg-tertiary) 90%, var(--mz-bg-tertiary) 100%);
+}
+footer li {
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+footer a {
+    color: var(--mz-black);
+    font-size: 18px;
+}
+footer a img {
+    width: 25px;
+}
+footer .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20%; 
+    padding: 70px 1% 70px 3%;
+}
+footer .center img {
+    width: 200px;
+    height: 180px;
+    border-radius: 15px;
+    margin: 0 0 8px 30%;
+}
+
+footer .bottom {
+    padding: 27px 4% 12px 4%;
+    border-top: 1px solid var(--mz-bg-secondary);
+}
+footer .bottom p {
+    margin: 0;
+}
+footer .details h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+footer .details p {
+    margin: 15px 0;
+}
+footer .details nav ul {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-left: -30px;
+}
+
+/*-----------------------------------error page  */
+.error-page {
+    background-color: var(--mz-blue-lighten);
+    height: 85vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+.error-inner {
+    width: 80%;
+}
+.error-head p {
+    color: var(--mz-bg-tertiary);
+    font-size: 18px;
+    text-align-last: left;
+}
+.error-head p span {
+    color: var(--mz-black)
+}
+.error-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px; 
+    margin-top: 6vh;
+}
+.error-info h1 {
+    font-size: 150px;
+}
+.error-info p {
+    font-size: 18px;
+}
+.error-info a {
+    background-color: rgb(216, 71, 71);
+    padding: 15px 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+}
+
