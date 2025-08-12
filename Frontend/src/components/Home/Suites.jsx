@@ -8,7 +8,7 @@ const Suites = () => {
       {/* carousel */}
       <div className="suites">
         <div className="suite">
-          <img src="../../assets/images/home/suites-main.jpeg" alt="Suite 1" />
+          <img src="../../assets/images/HOME/suites-main.jpeg" alt="Suite 1" />
 
           <div>
             <h2>Deluxe Suite</h2>

@@ -213,7 +213,7 @@ header img {
 /*-----------------------------------home page  */
 /* ----------about */
 .home-about {
-    background: url('../assets/images/home/suites-main.jpeg');
+    background: url('../assets/images/HOME/suites-main.jpeg');
     background-size: cover;
     background-position: center;
     height: 90vh;
@@ -312,7 +312,7 @@ header img {
 /* ----------events */
 .h-event {
     height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/home/beach-1.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/HOME/beach-1.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
