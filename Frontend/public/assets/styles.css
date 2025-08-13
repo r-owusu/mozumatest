@@ -213,7 +213,7 @@ header img {
 /*-----------------------------------home page  */
 /* ----------about */
 .home-about {
-    background: url('../assets/images/home/suites-main.jpeg');
+    background: url('../assets/images/HOME/suites-main.jpeg');
     background-size: cover;
     background-position: center;
     height: 90vh;
@@ -312,7 +312,7 @@ header img {
 /* ----------events */
 .h-event {
     height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/home/beach-1.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/HOME/beach-1.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -353,7 +353,7 @@ header img {
     align-items: center;
     justify-content: center;
     gap: 70px;
-    padding: 20px 10%;
+    padding: 20px 0;
 }
 .suite {
     width: 300px;
@@ -573,4 +573,93 @@ footer .details nav ul {
     font-size: 18px;
     color: white;
 }
+
+
+/*-----------------------------------login page  */
+.login-page {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    padding: 15vh 0;
+    background-color: var(--mz-blue-lighten);
+}
+
+.login-page div {
+    width: 65%;
+}
+.login-page div img {
+    height: 90vh;
+    width: 100%;
+}
+.login-inner h2 {
+    font-size: 35px;
+    font-weight: bold;
+}
+.login-inner p:nth-child(2) {
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+.login-inner input[type='button'] {
+    background-color: rgb(250, 70, 70);
+    border: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.login-div {
+    margin: 40px 0 25px 0;
+}
+.login-div a {
+    color: darkred;
+    font-size: 18px;
+}
+.login-button {
+    padding: 9px 20px;
+    margin-right: 30%;
+}
+.signup-button {
+    width: 50%;
+    padding: 10px 0;
+    margin: 20px 0 15px;
+}
+.login-inner form input[type='text'], input[type='password'] {
+    border: none;
+    border-bottom: 1px solid var(--mz-black);
+    background-color: transparent;
+    display: block;
+    outline: none;
+    padding: 5px 14px;
+    margin-bottom: 25px;
+    width: 50%;
+    font-size: 18px;
+}
+.login-option {
+    margin-top: 8px;
+    font-size: 18px;
+}
+.login-option a {
+    color: var(--mz-black); 
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    font-size: 18px;
+    margin-left: 20px;
+}
+.login-inner a img {
+    width: 30px;
+    height: 30px;
+}
+.google-login {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    gap: 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    height: 50px;
+    padding-top: 10px;
+    color: black;
+    margin-bottom: 25px;
+}
+
 
