@@ -1,0 +1,134 @@
+*header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #fff;
+  position: relative;
+  z-index: 1000;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.header-logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+/* Enhanced header shadow and border */
+
+
+/* Logo hover effect */
+.header-logo:hover {
+  color: #007bff;
+  text-shadow: 0 2px 8px rgba(0,123,255,0.08);
+}
+
+/* Logo image rounded */
+.header-logo img {
+  border-radius: 50%;
+  border: 2px solid #f0f0f0;
+  transition: border-color 0.2s;
+}
+.header-logo img:hover {
+  border-color: #007bff;
+}
+
+/* Navigation link hover and active */
+nav ul li a {
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  background: #f0f6ff;
+  color: #007bff;
+}
+
+/* Responsive nav improvements */
+@media (max-width: 768px) {
+  header {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  nav {
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  }
+}
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style-type: style;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+nav ul li a.active {
+  color: #007bff;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: all 0.3s;
+}
+
+.bar.rotate1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.bar.rotate2 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.bar.fade {
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #fff;
+    width: 200px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+
+  nav.open {
+    transform: translateX(0);
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+  }
+}

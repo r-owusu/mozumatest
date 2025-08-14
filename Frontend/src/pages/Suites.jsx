@@ -1,3 +1,6 @@
+
+import './suite.css'
+
 import React from 'react'
 import suitesInfo from '../data/suitesInfo'
 

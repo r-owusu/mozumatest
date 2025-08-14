@@ -1,0 +1,157 @@
+/* .signup-page {
+  display: flex;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  background-color: #f5f5f5;
+}
+
+.signup-image {
+  flex: 1;
+  min-width: 300px;
+  background: url('../../assets/images/suites/suite-7.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.signup-form {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.signup-form h2 {
+  margin-bottom: 10px;
+}
+
+.signup-form p {
+  margin-bottom: 20px;
+}
+
+.signup-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signup-form input {
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-button {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: green;
+  margin-bottom: 10px;
+}
+
+.login-option {
+  margin-top: 15px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .signup-page {
+    flex-direction: column;
+  }
+
+  .signup-image {
+    height: 200px;
+  }
+
+  .signup-form {
+    padding: 20px;
+  }
+} */
+
+
+
+.signup-page {
+  display: flex;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+
+/* Image container */
+.signup-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps aspect ratio and fills container */
+}
+
+/* Form styling */
+.signup-form {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.signup-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signup-button {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-button:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile: stack image on top of form, full width */
+@media (max-width: 768px) {
+  .signup-page {
+    flex-direction: column;
+  }
+
+  .signup-image {
+    width: 100%;
+    max-height: 300px; /* keeps image visible */
+    overflow: hidden;
+  }
+
+  .signup-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .signup-form {
+    padding: 20px;
+  }
+}
