@@ -21,7 +21,7 @@
 a {
     text-decoration: none;
 }
-button {
+button, .suite-button a {
     background-color: var(--mz-blue);
     color: var(--mz-white);
     border-radius: 5px;
@@ -73,6 +73,9 @@ button {
 }
 
 
+body {
+    overflow-x: hidden;
+}
 
 /* dummy css for wireframe */
 .section {
@@ -425,8 +428,10 @@ header img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 12vh; 
     padding-bottom: 10vh;
+}
+.suites-main .suites-list {
+    gap: 8vh;
 }
 .suite-inner {
     background-color: white;
@@ -450,7 +455,7 @@ header img {
 .suite-inner .icons {
     display: flex;
     align-items: center;
-    gap: 140px;
+    justify-content: space-between;
     margin: 15px 0 30px 0;
 }
 .suite-inner .icons div {
@@ -660,6 +665,17 @@ footer .details nav ul {
     padding-top: 10px;
     color: black;
     margin-bottom: 25px;
+}
+
+/* ------------------booking page------------------- */
+.main-booking-page {
+    background-color: var(--mz-blue-lighten);
+}
+.main-booking-page .suites-list {
+    gap: 3vh;
+}
+.booking-page-suites {
+    margin-bottom: 8px !important;
 }
 
 
