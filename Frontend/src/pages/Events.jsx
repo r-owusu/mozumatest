@@ -2,16 +2,15 @@ import React from 'react';
 import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 
+export default function Events() {
+  const navigate = useNavigate();
 
-
+  
 const WeddingsImg = '../../public/assets/images/events/wedding.png'; 
 const DinnerImg = '../../public/assets/images/events/dinner.png';
 const MovieImg = '../../public/assets/images/events/movie.png';
 const BirthdayImg = '../../public/assets/images/events/birthday.png';
 const ConferenceImg = '../../public/assets/images/events/conference.png';
-export default function Events() {
-  const navigate = useNavigate();
-
   const events = [
     {
       id: 1,
@@ -59,7 +58,7 @@ export default function Events() {
         className="d-flex align-items-center justify-content-center text-center"
         style={{
           height: '60vh',
-          backgroundImage: "url('../../assets/images/events/bgimg.jpg')",
+           backgroundImage: "url('../../assets/images/events/bgimg.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           position: 'relative',
@@ -87,10 +86,10 @@ export default function Events() {
         </div>
       </section>
 
-      {/* Events list (scrollable by default) */}
+      {/* Events list */}
       <main className="container py-5">
         <div className="row gy-5">
-          {events.map((e, idx) => (
+          {events.map((e) => (
             <div key={e.id} className="col-12">
               <div className="row align-items-center">
                 {/* image */}
@@ -107,15 +106,23 @@ export default function Events() {
 
                 {/* content */}
                 <div className="col-md-7">
-                  <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', marginBottom: '0.5rem' }}>{e.title}</h3>
+                  <h3
+                    style={{
+                      fontFamily: 'Playfair Display, serif',
+                      fontSize: '28px',
+                      marginBottom: '0.5rem',
+                    }}
+                  >
+                    {e.title}
+                  </h3>
                   <p style={{ textAlign: 'justify', lineHeight: 1.7 }}>{e.description}</p>
 
                   <button
                     className="btn"
                     style={{ backgroundColor: '#BFF3F0', boxShadow: '4px 6px 0 rgba(0,0,0,0.12)' }}
-                    onClick={() => navigate(`/events/${e.id}`)}
+                    onClick={() => navigate(`/booking?event=${e.id}&title=${encodeURIComponent(e.title)}`)}
                   >
-                    View Details
+                    Book Now
                   </button>
                 </div>
               </div>

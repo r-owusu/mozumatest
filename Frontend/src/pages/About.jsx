@@ -36,7 +36,7 @@ export default function About() {
               fontSize: '64px',
               lineHeight: '100%',
               letterSpacing: '0%',
-              color: '#041A18',
+              color: '#3F96CD',
             }}
           >
             About Us

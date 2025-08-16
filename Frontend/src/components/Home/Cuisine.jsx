@@ -17,7 +17,7 @@ const Cuisine = () => {
       <div className='h-cuisine-info'>
         <div>
           <div className='inner'>
-            <img src='../../assets/images/home/food-2.jpg' />
+            <img src='../../assets/images/HOME/food-2.jpg' />
 
             <div>
               <p>Enjoy authentic Ghanaian flavors and modern cuisine crafted with care.</p>
@@ -30,7 +30,7 @@ const Cuisine = () => {
         </div>
 
         <div className='h-cuisine-img'>
-          <img src='../../assets/images/home/food-1.jpg' />
+          <img src='../../assets/images/HOME/food-1.jpg' />
         </div>
       </div>
 

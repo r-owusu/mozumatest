@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Suites = () => {
   return (
     <div className='suites-container'>
@@ -8,12 +7,22 @@ const Suites = () => {
       {/* carousel */}
       <div className="suites">
         <div className="suite">
-          <img src="../../assets/images/home/suites-main.jpeg" alt="Suite 1" />
+          <img src="../../assets/images/HOME/suites-main.jpeg" alt="Suite 1" />
 
           <div>
             <h2>Deluxe Suite</h2>
             <p>Wake up to ocean view in this cozy suite with a balcony and king-sized bed</p>
             <p>From <span>$160/night</span></p>
+          </div>
+        </div>
+
+        <div className="suite">
+          <img src="../../assets/images/HOME/suites-main.jpeg" alt="Suite 1" />
+
+          <div>
+            <h2>Modern Suite</h2>
+            <p>Wake up to ocean view in this cozy suite with a balcony and king-sized bed</p>
+            <p>From <span>$120/night</span></p>
           </div>
         </div>
 
