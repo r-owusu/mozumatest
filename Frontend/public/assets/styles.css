@@ -1,7 +1,8 @@
 
 
 :root {
-    --mz-blue-lighten: #BCFBF8;
+    --mz-blue-lighten: #CFEBEA;
+    /* --mz-blue-lighten: #BCFBF8; */
     --mz-bg-secondary: #FEFFD5;
     --mz-brown: #5C1717;
     --mz-brown-light: #68541B;
@@ -21,13 +22,19 @@
 a {
     text-decoration: none;
 }
-button, .suite-button a {
+button, .suite-button a, .linkButton {
     background-color: var(--mz-blue);
     color: var(--mz-white);
     border-radius: 5px;
     padding: 8px 25px;
     font-size: 20px;
     border: none;
+}
+.bg-green {
+    background-color: green !important;
+}
+.bg-red {
+    background-color: rgb(180, 36, 36) !important;
 }
 
 @font-face {
@@ -106,10 +113,37 @@ body {
     color: white;
 }
 
+/*-----------------------------------breadcrumb  */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.breadcrumb a {
+    color: gray;
+}
+.breadcrumb p {
+    margin: 0;
+    padding: 0;
+}
+.pconfirm-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.pconfirm-inner h1 {
+    font-size: 60px;
+    margin: 20px 0;
+}
+.pconfirm-inner p {
+    font-size: 18px;
+}
+
 
 /*-----------------------------------header  */
 header {
-    background-color: var(--mz-blue-lighten);
+    background-color: #BCFBF8;
     position: fixed;
     top: 0;
     left: 0; 
@@ -406,6 +440,7 @@ header img {
 /* ----------starter */
 .suites-main {
     background-color: var(--mz-blue-lighten);
+    /* background-color: #BFF3F0; */
 }
 .suites-main .starter {
     height: 50vh;
@@ -434,10 +469,10 @@ header img {
     gap: 8vh;
 }
 .suite-inner {
-    background-color: white;
-    width: 60%;
+    /* background-color: white; */
+    width: 70%;
     border-radius: 10px;
-    padding: 30px;
+    /* padding: 30px; */
     display: flex;
     gap: 5%;
 }
@@ -769,3 +804,15 @@ footer .details nav ul {
 .suites-filter div label {
     font-size: 18px;
 }
+
+/* ------------------payment confirmation page----------------------------- */
+.pconfirm-page {
+    background-color: var(--mz-blue-lighten);
+    height: 70vh;
+    padding: 15vh 10% 0 10%;
+}
+.pconfirm-page img {
+    width: 50px;
+}
+
+
