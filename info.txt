@@ -1,0 +1,63 @@
+creating virtual environment  :python -m venv venv
+activating it  : .\venv\Scripts\activate
+
+
+creating a superuser: python manage.py createsuperuser
+thi is it api endPoint: http://localhost:8000/api/token/
+
+
+run your backend: python manage.py runserver
+
+clear db: rm db.sqlite3
+python manage.py migrate
+
+install Django: pip install Django
+
+If your project also uses Django REST framework, install it too: pip install djangorestframework
+
+
+to populate the database using commandline : python manage.py shell
+shell is not opened to populate database :
+
+
+
+from core.models import Room
+ 
+ Room.objects.create(
+.    name="Executive Suite",
+    description="Luxurious suite with ocean view",
+     price_per_night=350.00,
+     max_guests=3,
+     available=True
+ )
+<Room: Executive Suite>
+>>> 
+>>> Room.objects.create(
+...     name="Family Room",
+...     description="Room with double beds, great for families",       
+...     price_per_night=200.00,
+...     max_guests=5,
+...     available=True
+... )
+<Room: Family Room>
+>>> exit()
+
+
+creating a new user in commandline: 1. python manage.py shell
+ 2. from django.contrib.auth.models import User
+
+# Create a regular user
+User.objects.create_user(
+    username="testuser",
+    email="testuser@example.com",
+    password="strongpassword123"
+)
+
+
+
+
+Api endPoints on my machine
+signup endpoint: http://127.0.0.1:8000/api/api/register/
+login endpoit : http://localhost:800/api/token/
+booking endpoint: http://127.0.0.1:8000/api/api/bookings/
+
