@@ -441,34 +441,40 @@ header img {
     display: flex;
     gap: 5%;
 }
-.suite-inner h1 {
+.suite-inner h1, 
+.booking-page-suites h1 {
     text-transform: uppercase;
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 32px;
 }
-.suite-inner .suite-img {
+.suite-inner .suite-img, 
+.booking-page-suites .suite-img {
     width: 400px;
     height: 45vh;
     border-radius: 15px;
     object-fit: cover;
 }
-.suite-inner .icons {
+.suite-inner .icons, 
+.booking-page-suites .icons {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 15px 0 30px 0;
 }
-.suite-inner .icons div {
+.suite-inner .icons div, 
+.booking-page-suites .icons div {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.suite-inner .icons div p {
+.suite-inner .icons div p , 
+.booking-page-suites .icons div p {
     font-size: 18px;
     margin: 0;
     font-weight: 600;
 }
-.suite-inner .info img {
+.suite-inner .info img, 
+.booking-page-suites .info img {
     width: 30px;
     height: 30px;
 }
@@ -478,7 +484,8 @@ header img {
     justify-content: end;
     margin-top: 25px;
 }
-.suite-inner .info {
+.suite-inner .info,  
+.booking-page-suites .info  {
     padding-top: 40px;
 }
 .suite-desc {
@@ -670,12 +677,95 @@ footer .details nav ul {
 /* ------------------booking page------------------- */
 .main-booking-page {
     background-color: var(--mz-blue-lighten);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.booking-page-inner {
+    border: 1px solid black;
+    width: 80%;
+    margin: 20vh 0 8vh 0;
+    border-radius: 30px;
 }
 .main-booking-page .suites-list {
     gap: 3vh;
 }
 .booking-page-suites {
+    background-color: white;
+    width: 90%;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    gap: 5%;
     margin-bottom: 8px !important;
 }
 
-
+.booking-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+.booking-details img {
+    width: 30px;
+}
+.bdetails-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+.booking-details .b1 {
+    padding: 8px 0;
+}
+.booking-details .b1 img {
+    margin-right: 10px;
+}
+.booking-details .b1 h1 {
+    font-size: 22px;
+    padding: 0;
+    color: var(--mz-brown);
+    margin-bottom: 0;
+}
+.booking-details .b1 p {
+    font-size: 18px;
+    margin: 0;
+}
+.booking-details .bdate input {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 12px 0 3px 0;
+    outline: none;
+    font-size: 18px;
+}
+.booking-details .bdate h1 {
+    color: var(--mz-brown); 
+    font-size: 22px;
+}
+.border-left {
+    border-right: 1px solid black;
+}
+.booking-suites-details {
+    padding: 15px 10%;
+}
+.booking-suites-details h1{
+    font-size: 30px;
+    color: var(--mz-brown);
+    font-weight: bold;
+}
+.suites-filter {
+    display: flex;
+    align-items: center;
+    gap: 20%;
+    margin-bottom: 35px;
+}
+.suites-filter div input {
+    margin-right: 10px;
+    width: 30px;
+}
+.suites-filter div label {
+    font-size: 18px;
+}
