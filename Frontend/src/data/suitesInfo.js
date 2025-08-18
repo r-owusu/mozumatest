@@ -32,7 +32,7 @@ const suitesInfo = [
     {
         id: '1523434',
         img: '../assets/images/suites/mozuma-pool.png', 
-        name: 'garden lounge Suie',
+        name: 'garden lounge Suite',
         detailIcon1: '../assets/images/suites/guests-icon.png', 
         detailMessage1: 'Open 24/7',
         detailIcon2: '../assets/images/suites/guests-icon.png', 

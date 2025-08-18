@@ -1,3 +1,5 @@
+
+
 import React from 'react'
 import suitesInfo from '../data/suitesInfo'
 
@@ -22,7 +24,9 @@ const Suites = () => {
       <div className='suites-list'>
         {suitesInfo.map((suite) => (
           <div className='suite-inner' key={suite.id}>
-            <img className='suite-img' src={suite.img} />
+            <div>
+              <img className='suite-img' src={suite.img} />
+            </div>
 
             <div className='info'>
               <h1>{suite.name}</h1>
@@ -42,8 +46,8 @@ const Suites = () => {
               <p className='suite-desc'>{suite.description}</p>
 
               <div className='suite-button'>
-              <button onClick={() => getSuite(suite.id)}>Book Now</button>
-            </div>
+                <a href='/booking' onClick={() => getSuite(suite.id)}>Book Now</a>
+              </div>
             </div>
           </div>
         ))}
