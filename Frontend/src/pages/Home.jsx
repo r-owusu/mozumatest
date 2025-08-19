@@ -13,6 +13,7 @@ const Home = () => {
 
         </video>
 
+
         <div className='home-welcome-info'>
           <div>
             <h1>AKWAABA</h1>
