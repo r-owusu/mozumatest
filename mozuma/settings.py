@@ -112,8 +112,9 @@ DATABASES = {
         'NAME': 'mozuma_db',
         'USER': 'mozuma_user',
         'PASSWORD':os.environ.get('db_password'),
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'HOST': os.environ.get('db_host', '127.0.0.1'),
+        'PORT': os.environ.get('db_port', '3306'),
+    
     }
 }
 
