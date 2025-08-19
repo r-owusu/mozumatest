@@ -4,11 +4,13 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-const WeddingsImg = '../../public/assets/images/events/wedding.png'; 
-const DinnerImg = '../../public/assets/images/events/dinner.png';
-const MovieImg = '../../public/assets/images/events/movie.png';
-const BirthdayImg = '../../public/assets/images/events/birthday.png';
-const ConferenceImg = '../../public/assets/images/events/conference.png';
+
+const WeddingsImg = '../../assets/images/events/wedding.png';
+const DinnerImg = '../../assets/images/events/dinner.png';
+const MovieImg = '../../assets/images/events/movie.png';
+const BirthdayImg = '../../assets/images/events/birthday.png';
+const ConferenceImg = '../../assets/images/events/conference.png';
+
 export default function Events() {
   const navigate = useNavigate();
 
