@@ -32,7 +32,7 @@ const Booking = () => {
         {/* ------suites details----------- */}
         <div>
         {/* header */}
-        <div className='booking-suites-details'>
+        {/* <div className='booking-suites-details'>
           <h1>Availability</h1>   
 
           <div className='suites-filter'>
@@ -51,10 +51,10 @@ const Booking = () => {
               <label>Events</label>
             </div>
           </div>     
-        </div>
+        </div> */}
 
         {/* ---------suites list---------- */}
-        <div className='suites-list'>
+        <div className='suites-list mt-5'>
                 {suitesInfo.map((suite) => (
                   <div className='booking-page-suites' key={suite.id}>
                     <div>
@@ -79,7 +79,7 @@ const Booking = () => {
                       <p className='suite-desc'>{suite.description}</p>
         
                       <div className='suite-button'>
-                        <a href='/booking' onClick={() => getSuite(suite.id)}>Book Now</a>
+                        <a href='/payment' className='bg-green' onClick={() => getSuite(suite.id)}>Book Suite</a>
                       </div>
                     </div>
                   </div>

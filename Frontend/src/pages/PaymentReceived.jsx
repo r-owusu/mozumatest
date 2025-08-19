@@ -1,13 +1,21 @@
 
 
 
-const PaymentConfirmation = () => {
-  const confrimed = false
+const PaymentReceived = () => {
+  const confrimed = true
 
   return (
     <div className="pconfirm-page">
       <div className="breadcrumb">
-        <a href="/booking">Booking Page</a>
+        <a href="/login">Login</a>
+        <p>/</p>
+         <a href="/booking">Booking Page</a>
+        <p>/</p>
+         <a href="/payment">Payment</a>
+        <p>/</p>
+        <a href="/payment-confirmation">Confirmation</a>
+        <p>/</p>
+         <a href="/processing">Processing</a>
         <p>/</p>
         <p>Payment Confirmation</p>
       </div>
@@ -28,4 +36,4 @@ const PaymentConfirmation = () => {
   )
 }
 
-export default PaymentConfirmation
+export default PaymentReceived

@@ -19,8 +19,9 @@ import Suites from './pages/Suites'
 import ErrorPage from './pages/ErrorPage'
 import About from './pages/About'
 import Payment from './pages/Payments'
-import PaymentConfirmation from './pages/PaymentConfrimation'
+import PaymentReceived from './pages/PaymentReceived'
 import Processing from './pages/Processing'
+import PaymentConfirmation from './pages/PaymentConfirmation'
 
 function App() {
 
@@ -40,7 +41,8 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/processing' element={<Processing />} />
         <Route path='/payment' element={<Payment />} />
-        <Route path='/payment-confirmation' element={<PaymentConfirmation />} />
+        <Route path='/payment-received' element={<PaymentReceived />} />
+        <Route path='/payment-confirmation' element={<PaymentConfirmation/>} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
 
