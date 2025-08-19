@@ -12,6 +12,22 @@ jobs:
   backend-tests:
     runs-on: ubuntu-latest
 
+    services:   # 👈 services should be inside the job, not outside
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: mozuma_db
+          MYSQL_USER: mozuma_user
+          MYSQL_PASSWORD: testpass
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping --silent"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
     defaults:
       run:
         working-directory: Backend  # All commands run from Backend folder
@@ -33,14 +49,15 @@ jobs:
           pip install -r requirements.txt
           pip install python-dotenv
           pip install django-cors-headers mysqlclient
+
       - name: Install system dependencies
         run: |
-         sudo apt-get update
-         sudo apt-get install -y default-libmysqlclient-dev build-essential
-
+          sudo apt-get update
+          sudo apt-get install -y default-libmysqlclient-dev build-essential
 
       - name: Run Django tests
         env:
-          DJANGO_SETTINGS_MODULE: mozuma.settings  
+          DJANGO_SETTINGS_MODULE: mozuma.settings
+          db_password: testpass   # 👈 matches MYSQL_PASSWORD above
         run: |
           python manage.py test
