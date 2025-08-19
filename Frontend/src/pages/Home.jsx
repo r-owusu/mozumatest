@@ -8,23 +8,12 @@ const Home = () => {
       {/* ---------------welcome---------- */}
       <div className='home-welcome'>
         <video autoPlay loop muted playsInline>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <source src='./public/assets/images/HOME/intro-video.mp4' type='video/mp4' />
-=======
-
-          <source src='./assets/images/HOME/intro-video.mp4' type='video/mp4' />
-
->>>>>>> 5dcacd3e51b92f049f4e2f2332e43093dfa4b9b0
-        </video>
-
-=======
 
           <source src='./assets/images/HOME/intro-video.mp4' type='video/mp4' />
 
         </video>
 
->>>>>>> dc1c9bafcbd378c57069c622514540eecfcff5ed
+
         <div className='home-welcome-info'>
           <div>
             <h1>AKWAABA</h1>
