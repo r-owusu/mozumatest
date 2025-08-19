@@ -2,7 +2,8 @@
 
 :root {
     --mz-blue-lighten: #CFEBEA;
-    /* --mz-blue-lighten: #BCFBF8; */
+    /* --mz-blue-lighten: #CFEBEA;
+    /* --mz-blue-lighten: #BCFBF8; */ */
     --mz-bg-secondary: #FEFFD5;
     --mz-brown: #5C1717;
     --mz-brown-light: #68541B;
@@ -111,34 +112,6 @@ body {
     height: 30vh;
     background-color: green !important;
     color: white;
-}
-
-/*-----------------------------------breadcrumb  */
-.breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.breadcrumb a {
-    color: gray;
-}
-.breadcrumb p {
-    margin: 0;
-    padding: 0;
-}
-.pconfirm-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 12vh;
-}
-.pconfirm-inner h1 {
-    font-size: 60px;
-    margin: 40px 0 10px 0;
-}
-.pconfirm-inner p {
-    font-size: 18px;
 }
 
 
@@ -470,8 +443,10 @@ header img {
     gap: 8vh;
 }
 .suite-inner {
-    width: 70%;
+    background-color: white;
+    width: 60%;
     border-radius: 10px;
+    padding: 30px;
     display: flex;
     gap: 5%;
 }
@@ -624,197 +599,4 @@ footer .details nav ul {
     font-size: 18px;
     color: white;
 }
-
-
-/*-----------------------------------login page  */
-.login-page {
-    display: flex;
-    align-items: center;
-    gap: 10%;
-    padding: 15vh 0;
-    background-color: var(--mz-blue-lighten);
-}
-
-.login-page div {
-    width: 65%;
-}
-.login-page div img {
-    height: 90vh;
-    width: 100%;
-}
-.login-inner h2 {
-    font-size: 35px;
-    font-weight: bold;
-}
-.login-inner p:nth-child(2) {
-    font-size: 18px;
-    margin-bottom: 50px;
-}
-.login-inner input[type='button'] {
-    background-color: rgb(250, 70, 70);
-    border: none;
-    color: white;
-    border-radius: 4px;
-    font-size: 14px;
-}
-.login-div {
-    margin: 40px 0 25px 0;
-}
-.login-div a {
-    color: darkred;
-    font-size: 18px;
-}
-.login-button {
-    padding: 9px 20px;
-    margin-right: 30%;
-}
-.signup-button {
-    width: 50%;
-    padding: 10px 0;
-    margin: 20px 0 15px;
-}
-.login-inner form input[type='text'], input[type='password'] {
-    border: none;
-    border-bottom: 1px solid var(--mz-black);
-    background-color: transparent;
-    display: block;
-    outline: none;
-    padding: 5px 14px;
-    margin-bottom: 25px;
-    width: 50%;
-    font-size: 18px;
-}
-.login-option {
-    margin-top: 8px;
-    font-size: 18px;
-}
-.login-option a {
-    color: var(--mz-black); 
-    font-weight: bold;
-    text-decoration: underline;
-    text-underline-offset: 7px;
-    font-size: 18px;
-    margin-left: 20px;
-}
-.login-inner a img {
-    width: 30px;
-    height: 30px;
-}
-.google-login {
-    display: flex;
-    width: 50%;
-    justify-content: center;
-    gap: 20px;
-    border: 1px solid black;
-    border-radius: 4px;
-    height: 50px;
-    padding-top: 10px;
-    color: black;
-    margin-bottom: 25px;
-}
-
-/* ------------------booking page------------------- */
-.main-booking-page {
-    background-color: var(--mz-blue-lighten);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.booking-page-inner {
-    border: 1px solid black;
-    width: 80%;
-    margin: 20vh 0 8vh 0;
-    border-radius: 30px;
-}
-.main-booking-page .suites-list {
-    gap: 3vh;
-}
-.booking-page-suites {
-    width: 90%;
-    border-radius: 10px;
-    display: flex;
-    gap: 5%;
-    margin-bottom: 15px !important;
-}
-
-.booking-details {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid black;
-}
-.booking-details img {
-    width: 30px;
-}
-.bdetails-main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-}
-.booking-details .b1 {
-    padding: 8px 0;
-}
-.booking-details .b1 img {
-    margin-right: 10px;
-}
-.booking-details .b1 h1 {
-    font-size: 22px;
-    padding: 0;
-    color: var(--mz-brown);
-    margin-bottom: 0;
-}
-.booking-details .b1 p {
-    font-size: 18px;
-    margin: 0;
-}
-.booking-details .bdate input {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    margin: 12px 0 3px 0;
-    outline: none;
-    font-size: 18px;
-}
-.booking-details .bdate h1 {
-    color: var(--mz-brown); 
-    font-size: 22px;
-}
-.border-left {
-    border-right: 1px solid black;
-}
-.booking-suites-details {
-    padding: 15px 10%;
-}
-.booking-suites-details h1{
-    font-size: 30px;
-    color: var(--mz-brown);
-    font-weight: bold;
-}
-.suites-filter {
-    display: flex;
-    align-items: center;
-    gap: 20%;
-    margin-bottom: 35px;
-}
-.suites-filter div input {
-    margin-right: 10px;
-    width: 30px;
-}
-.suites-filter div label {
-    font-size: 18px;
-}
-
-/* ------------------payment confirmation page----------------------------- */
-.pconfirm-page {
-    background-color: var(--mz-blue-lighten);
-    height: 70vh;
-    padding: 15vh 10% 0 10%;
-}
-.pconfirm-page img {
-    width: 50px;
-}
-
 
