@@ -112,14 +112,11 @@ DATABASES = {
         'NAME': 'mozuma_db',
         'USER': 'mozuma_user',
         'PASSWORD':os.environ.get('db_password'),
-<<<<<<< HEAD
-        'HOST': 'localhost',
-        'PORT': '3306',
-=======
+
         'HOST': os.environ.get('db_host', '127.0.0.1'),
         'PORT': os.environ.get('db_port', '3306'),
     
->>>>>>> dc1c9bafcbd378c57069c622514540eecfcff5ed
+
     }
 }
 
