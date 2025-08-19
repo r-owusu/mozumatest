@@ -8,9 +8,17 @@ const Home = () => {
       {/* ---------------welcome---------- */}
       <div className='home-welcome'>
         <video autoPlay loop muted playsInline>
+<<<<<<< HEAD
           <source src='./public/assets/images/HOME/intro-video.mp4' type='video/mp4' />
         </video>
 
+=======
+
+          <source src='./assets/images/HOME/intro-video.mp4' type='video/mp4' />
+
+        </video>
+
+>>>>>>> dc1c9bafcbd378c57069c622514540eecfcff5ed
         <div className='home-welcome-info'>
           <div>
             <h1>AKWAABA</h1>
