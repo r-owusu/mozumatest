@@ -59,5 +59,7 @@ jobs:
         env:
           DJANGO_SETTINGS_MODULE: mozuma.settings
           db_password: testpass   # 👈 matches MYSQL_PASSWORD above
+          db_host: 127.0.0.1      # force TCP
+          db_port: 3306
         run: |
           python manage.py test
