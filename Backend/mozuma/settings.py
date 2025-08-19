@@ -116,7 +116,6 @@ DATABASES = {
         'HOST': os.environ.get('db_host', '127.0.0.1'),
         'PORT': os.environ.get('db_port', '3306'),
     
-
     }
 }
 
