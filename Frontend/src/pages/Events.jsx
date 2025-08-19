@@ -12,6 +12,7 @@ const MovieImg = '../../assets/images/events/movie.png';
 const BirthdayImg = '../../assets/images/events/birthday.png';
 const ConferenceImg = '../../assets/images/events/conference.png';
 
+
 export default function Events() {
   const navigate = useNavigate();
 
