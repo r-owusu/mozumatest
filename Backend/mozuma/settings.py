@@ -211,7 +211,10 @@ ALLOWED_HOSTS = [
 # settings.py
 
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = [
+    'https://mozuma-oceanfront-suites-beyin.vercel.app',
+    'https://mozuma-oceanfront-suites-beyin-production.up.railway.app'
+]
 CORS_ALLOW_CREDENTIALS = True
 
 INSTALLED_APPS = [
