@@ -33,7 +33,7 @@ jobs:
         working-directory: Backend  # All commands run from Backend folder
 
     steps:
-      - name: Checkout Database branch
+      - name: Checkout Main branch
         uses: actions/checkout@v4
         with:
           ref: Database  # Checkout the branch that contains the backend
