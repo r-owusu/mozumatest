@@ -1,0 +1,2 @@
+web: gunicorn mozuma.wsgi
+python-3.11.9
