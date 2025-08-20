@@ -13,7 +13,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8000/api/token/", {
+      const response = await fetch("http://mozuma-oceanfront-suites-beyin-production.up.railway.app/api/token/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
