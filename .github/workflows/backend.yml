@@ -36,7 +36,7 @@ jobs:
       - name: Checkout Main branch
         uses: actions/checkout@v4
         with:
-          ref: Main  # Checkout the branch that contains the backend
+          ref: Database  # Checkout the branch that contains the backend
 
       - name: Set up Python
         uses: actions/setup-python@v4
