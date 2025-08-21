@@ -8,8 +8,11 @@ const Home = () => {
       {/* ---------------welcome---------- */}
       <div className='home-welcome'>
         <video autoPlay loop muted playsInline>
+
           <source src='./assets/images/HOME/intro-video.mp4' type='video/mp4' />
+
         </video>
+
 
         <div className='home-welcome-info'>
           <div>

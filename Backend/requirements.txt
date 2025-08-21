@@ -4,6 +4,7 @@ djangorestframework==3.16.0
 djangorestframework_simplejwt==5.5.1
 PyJWT==2.10.1
 sqlparse==0.5.3
+<<<<<<< HEAD
 asgiref==3.9.1
 Django==5.2.4
 djangorestframework==3.16.0
@@ -12,3 +13,10 @@ PyJWT==2.10.1
 sqlparse==0.5.3
 mysqlclient==2.2.4
 gunicorn==23.0.0
+=======
+PyMySQL==1.1.1
+gunicorn==23.0.0
+python-dotenv==1.0.1
+django-cors-headers==4.6.0
+mysqlclient
+>>>>>>> ffdb607f3ee6c7930c618dfc24e4b565c86ab0b5
