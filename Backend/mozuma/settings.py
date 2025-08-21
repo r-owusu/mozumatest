@@ -201,9 +201,9 @@ SECRET_KEY = os.getenv("SECRET_KEY", "unsafe-secret-key")
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-    os.getenv("RAILWAY_DOMAIN", "mozuma-oceanfront-suites-beyin-production.up.railway.app"),
+    'mozuma-oceanfront-suites-beyin-production.up.railway.app',
+    'localhost',
+    '127.0.0.1'
 ]
 
 # Application definition
@@ -328,6 +328,12 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+]
+
+# Add this for HTTPS/SSL support
+CSRF_TRUSTED_ORIGINS = [
+    'https://mozuma-oceanfront-suites-beyin-production.up.railway.app',
+    'https://*.railway.app',
 ]
 
 # Internationalization
