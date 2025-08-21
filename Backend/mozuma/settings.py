@@ -201,9 +201,11 @@ SECRET_KEY = os.getenv("SECRET_KEY", "unsafe-secret-key")
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = [
+
     'mozuma-oceanfront-suites-beyin-production.up.railway.app',
     'localhost',
     '127.0.0.1'
+
 ]
 
 # Application definition
@@ -211,7 +213,10 @@ ALLOWED_HOSTS = [
 # settings.py
 
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = [
+    'https://mozuma-oceanfront-suites-beyin.vercel.app',
+    'https://mozuma-oceanfront-suites-beyin-production.up.railway.app'
+]
 CORS_ALLOW_CREDENTIALS = True
 
 INSTALLED_APPS = [
@@ -308,6 +313,7 @@ else:
             "PORT": "3306",
         }
     }
+
 
 
 
