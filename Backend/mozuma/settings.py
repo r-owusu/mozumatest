@@ -295,7 +295,7 @@ WSGI_APPLICATION = 'mozuma.wsgi.application'
 
 
 # Database: local by default, switch to Railway if env variables exist
-    DATABASES = {
+DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.mysql",
             "NAME": os.environ.get("MYSQL_DATABASE", 'railway'),
