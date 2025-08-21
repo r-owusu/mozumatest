@@ -3,8 +3,16 @@ import React from 'react'
 
 const Payments = () => {
   return (
-   <div className='pages'> 
-      <h1>Payments</h1>
+    <div className='payment'>
+       <div className="breadcrumb">
+        <a href="/login">Login</a>
+        <p>/</p>
+        <a href="/booking">Booking Page</a>
+        <p>/</p>
+        <p>Payment</p>
+      </div>
+
+
     </div>
   )
 }

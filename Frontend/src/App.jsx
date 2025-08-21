@@ -21,7 +21,7 @@ import About from './pages/About'
 import Payment from './pages/Payments'
 import PaymentReceived from './pages/PaymentReceived'
 import Processing from './pages/Processing'
-import PaymentConfirmation from './pages/PaymentConfirmation'
+import PaymentConfirmation from './pages/PaymentConfrimation'
 
 function App() {
 
@@ -39,7 +39,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         <Route path='/about' element={<About />} />
-        <Route path='/processing' element={<Processing />} />
+        <Route path='/payment-processing' element={<Processing />} />
         <Route path='/payment' element={<Payment />} />
         <Route path='/payment-received' element={<PaymentReceived />} />
         <Route path='/payment-confirmation' element={<PaymentConfirmation/>} />
