@@ -203,7 +203,7 @@ DEBUG = os.getenv("DEBUG", "False") == "True"
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    os.getenv("RAILWAY_DOMAIN", "your-app.up.railway.app"),
+    os.getenv("RAILWAY_DOMAIN", "mozuma-oceanfront-suites-beyin-production.up.railway.app"),
 ]
 
 # Application definition
