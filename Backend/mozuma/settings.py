@@ -303,22 +303,11 @@ if os.environ.get("RAILWAY_DB_HOST"):
             "USER": os.environ.get("MYSQLUSER", 'root'),
             "PASSWORD": os.environ.get("MYSQLPASSWORD", 'XEmylYbOXahDcRHVSMEzDVkJVLdqtFdi'),
             "HOST": os.environ.get("MYSQLHOST", 'mysql.railway.internal'),
-            "PORT": os.environ.get("MYSQLPORT", '3306'),
-            
+            "PORT": os.environ.get("MYSQLPORT", '3306'),           
 
         }
     }
-else:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.mysql",
-            "NAME": "mozuma_db",
-            "USER": "mozuma_user",
-            "PASSWORD": os.environ.get("db_password"),
-            "HOST": "localhost",
-            "PORT": "3306",
-        }
-    }
+
 
 
 
