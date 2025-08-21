@@ -201,9 +201,11 @@ SECRET_KEY = os.getenv("SECRET_KEY", "unsafe-secret-key")
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-    os.getenv("RAILWAY_DOMAIN", "your-app.up.railway.app"),
+
+    'mozuma-oceanfront-suites-beyin-production.up.railway.app',
+    'localhost',
+    '127.0.0.1'
+
 ]
 
 # Application definition
@@ -291,11 +293,13 @@ if os.environ.get("RAILWAY_DB_HOST"):
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.mysql",
-            "NAME": os.environ.get("MYSQL_DATABASE"),
-            "USER": os.environ.get("MYSQLUSER"),
-            "PASSWORD": os.environ.get("MYSQLPASSWORD"),
-            "HOST": os.environ.get("MYSQLHOST"),
-            "PORT": os.environ.get("MYSQLPORT"),
+            "NAME": os.environ.get("MYSQL_DATABASE", 'railway'),
+            "USER": os.environ.get("MYSQLUSER", 'root'),
+            "PASSWORD": os.environ.get("MYSQLPASSWORD", 'XEmylYbOXahDcRHVSMEzDVkJVLdqtFdi'),
+            "HOST": os.environ.get("MYSQLHOST", 'mysql.railway.internal'),
+            "PORT": os.environ.get("MYSQLPORT", '3306'),
+            
+
         }
     }
 else:
@@ -309,6 +313,7 @@ else:
             "PORT": "3306",
         }
     }
+
 
 
 
@@ -329,6 +334,12 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+]
+
+# Add this for HTTPS/SSL support
+CSRF_TRUSTED_ORIGINS = [
+    'https://mozuma-oceanfront-suites-beyin-production.up.railway.app',
+    'https://*.railway.app',
 ]
 
 # Internationalization
