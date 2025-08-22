@@ -217,7 +217,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 # settings.py
-
+CORS_ALLOW_ALL_ORIGINS = False
 
 CORS_ALLOW_ALL_ORIGINS = [
     'https://mozuma-oceanfront-suites-beyin.vercel.app',
