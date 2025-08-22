@@ -16,3 +16,4 @@ urllib3==2.5.0
 pymysql
 dj-database-url
 django-cors-headers
+gunicorn
