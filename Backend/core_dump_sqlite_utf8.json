@@ -1,0 +1,44 @@
+﻿[
+{
+  "model": "core.room",
+  "pk": 1,
+  "fields": {
+    "name": "xfbv",
+    "description": "lhnjn",
+    "price_per_night": "515.00",
+    "max_guests": 5,
+    "available": true
+  }
+},
+{
+  "model": "core.room",
+  "pk": 2,
+  "fields": {
+    "name": "Deluxe Suite",
+    "description": "Sea view, king bed, ensuite",
+    "price_per_night": "120.00",
+    "max_guests": 4,
+    "available": true
+  }
+},
+{
+  "model": "core.customuser",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$9MVjiBtdLjpnMgXl9SJ5oL$n40Z/uV5eTeZj+UgGMt7cU8HQNfZxEWz0g5zKLH1LME=",
+    "last_login": "2025-08-22T12:25:00.923Z",
+    "is_superuser": true,
+    "username": "mozuma",
+    "first_name": "",
+    "last_name": "",
+    "email": "therts901@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-08-21T16:59:47.425Z",
+    "phone_number": null,
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
+
