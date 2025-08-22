@@ -22,7 +22,11 @@
 a {
     text-decoration: none;
 }
+<<<<<<< HEAD
+button, .suite-button a {
+=======
 button, .suite-button a, .linkButton {
+>>>>>>> b73d966d561d21b998a6cc481dd9b5f94d98e4ce
     background-color: var(--mz-blue);
     color: var(--mz-white);
     border-radius: 5px;
@@ -709,6 +713,13 @@ footer .details nav ul {
     margin-bottom: 25px;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/* ------------------booking page------------------- */
+.main-booking-page {
+    background-color: var(--mz-blue-lighten);
+=======
 /* ------------------booking page------------------- */
 .main-booking-page {
     background-color: var(--mz-blue-lighten);
@@ -721,11 +732,18 @@ footer .details nav ul {
     width: 80%;
     margin: 20vh 0 8vh 0;
     border-radius: 30px;
+>>>>>>> b73d966d561d21b998a6cc481dd9b5f94d98e4ce
 }
 .main-booking-page .suites-list {
     gap: 3vh;
 }
 .booking-page-suites {
+<<<<<<< HEAD
+    margin-bottom: 8px !important;
+}
+
+>>>>>>> 2755c43c0523f8d9bfad511fc51f09c73ba4d260
+=======
     background-color: white;
     width: 90%;
     border-radius: 10px;
@@ -815,4 +833,5 @@ footer .details nav ul {
     width: 50px;
 }
 
+>>>>>>> b73d966d561d21b998a6cc481dd9b5f94d98e4ce
 

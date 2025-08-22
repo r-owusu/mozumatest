@@ -2,6 +2,17 @@ import React from 'react';
 import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 
+<<<<<<< HEAD
+export default function Events() {
+  const navigate = useNavigate();
+
+  
+const WeddingsImg = '../../public/assets/images/events/wedding.png'; 
+const DinnerImg = '../../public/assets/images/events/dinner.png';
+const MovieImg = '../../public/assets/images/events/movie.png';
+const BirthdayImg = '../../public/assets/images/events/birthday.png';
+const ConferenceImg = '../../public/assets/images/events/conference.png';
+=======
 
 
 
@@ -16,6 +27,7 @@ const ConferenceImg = '../../assets/images/events/conference.png';
 export default function Events() {
   const navigate = useNavigate();
 
+>>>>>>> b73d966d561d21b998a6cc481dd9b5f94d98e4ce
   const events = [
     {
       id: 1,
@@ -63,7 +75,11 @@ export default function Events() {
         className="d-flex align-items-center justify-content-center text-center"
         style={{
           height: '60vh',
+<<<<<<< HEAD
+           backgroundImage: "url('../../assets/images/events/bgimg.jpg')",
+=======
           backgroundImage: "url('../../assets/images/events/bgimg.jpg')",
+>>>>>>> b73d966d561d21b998a6cc481dd9b5f94d98e4ce
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           position: 'relative',
@@ -91,10 +107,17 @@ export default function Events() {
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* Events list */}
+      <main className="container py-5">
+        <div className="row gy-5">
+          {events.map((e) => (
+=======
       {/* Events list (scrollable by default) */}
       <main className="container py-5">
         <div className="row gy-5">
           {events.map((e, idx) => (
+>>>>>>> b73d966d561d21b998a6cc481dd9b5f94d98e4ce
             <div key={e.id} className="col-12">
               <div className="row align-items-center">
                 {/* image */}
@@ -111,15 +134,33 @@ export default function Events() {
 
                 {/* content */}
                 <div className="col-md-7">
+<<<<<<< HEAD
+                  <h3
+                    style={{
+                      fontFamily: 'Playfair Display, serif',
+                      fontSize: '28px',
+                      marginBottom: '0.5rem',
+                    }}
+                  >
+                    {e.title}
+                  </h3>
+=======
                   <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', marginBottom: '0.5rem' }}>{e.title}</h3>
+>>>>>>> b73d966d561d21b998a6cc481dd9b5f94d98e4ce
                   <p style={{ textAlign: 'justify', lineHeight: 1.7 }}>{e.description}</p>
 
                   <button
                     className="btn"
                     style={{ backgroundColor: '#BFF3F0', boxShadow: '4px 6px 0 rgba(0,0,0,0.12)' }}
+<<<<<<< HEAD
+                    onClick={() => navigate(`/booking?event=${e.id}&title=${encodeURIComponent(e.title)}`)}
+                  >
+                    Book Now
+=======
                     onClick={() => navigate(`/events/${e.id}`)}
                   >
                     View Details
+>>>>>>> b73d966d561d21b998a6cc481dd9b5f94d98e4ce
                   </button>
                 </div>
               </div>

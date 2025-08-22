@@ -31,7 +31,14 @@ const suitesInfo = [
     },
     {
         id: '1523434',
+<<<<<<< HEAD
+        img: '../assets/images/suites/mozuma-pool.PNG', 
+=======
         img: '../assets/images/suites/mozuma-pool.png', 
+<<<<<<< HEAD
+>>>>>>> 2755c43c0523f8d9bfad511fc51f09c73ba4d260
+=======
+>>>>>>> b73d966d561d21b998a6cc481dd9b5f94d98e4ce
         name: 'garden lounge Suite',
         detailIcon1: '../assets/images/suites/guests-icon.png', 
         detailMessage1: 'Open 24/7',

@@ -3,7 +3,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
+<<<<<<< HEAD
+  background-color: #fff;
+=======
   background-color: #CFEBEA !important;
+>>>>>>> b73d966d561d21b998a6cc481dd9b5f94d98e4ce
   position: relative;
   z-index: 1000;
 }
