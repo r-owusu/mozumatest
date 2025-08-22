@@ -1,2 +1,2 @@
 web: gunicorn mozuma.wsgi
-release: pip install -r requirements.txt && python manage.py migrate
+release: python manage.py migrate
