@@ -1,4 +1,5 @@
 from django.test import TestCase
+
 from django.contrib.auth import get_user_model
 from .models import Room, Booking, CustomUser
 from rest_framework.test import APIClient
@@ -86,3 +87,4 @@ class BookingAPITest(TestCase):
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, 201)
         self.assertEqual(response.data["guest_name"], "Revic Osei-Owusu")
+

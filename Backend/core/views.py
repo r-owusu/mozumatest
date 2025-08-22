@@ -3,10 +3,15 @@ from django.conf import settings
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
+from django.shortcuts import render
 from rest_framework import generics, permissions
 from .models import Room, Booking, CustomUser
 from .serializers import RoomSerializer, BookingSerializer, UserRegisterSerializer
 
+
+# --------------------------
+# Stripe Payment Intent API
+# --------------------------
 class CreatePaymentIntentView(APIView):
     permission_classes = [AllowAny]  # Change to IsAuthenticated if login is required
 
@@ -39,10 +44,10 @@ class RoomListAPIView(generics.ListAPIView):
 class BookingCreateView(generics.CreateAPIView):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]  # Only logged-in users can book
 
     def get_serializer_context(self):
-        return {'request': self.request}
+        return {'request': self.request}  # Pass request to serializer (to capture user)
 
 
 # --------------------------
@@ -51,4 +56,4 @@ class BookingCreateView(generics.CreateAPIView):
 class UserRegisterView(generics.CreateAPIView):
     queryset = CustomUser.objects.all()
     serializer_class = UserRegisterSerializer
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [permissions.AllowAny]  # Anyone can register
