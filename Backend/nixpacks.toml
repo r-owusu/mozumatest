@@ -1,7 +1,6 @@
 # Make sure you're in the Backend directory
 
 # Create nixpacks.toml with the configuration
-cat > nixpacks.toml << 'EOF'
 [phases.setup]
 nixPkgs = ["python3", "pip"]
 
