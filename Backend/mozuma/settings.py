@@ -298,7 +298,7 @@ WSGI_APPLICATION = 'mozuma.wsgi.application'
 DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.mysql",
-            "NAME": os.environ.get("MYSQL_DATABASE", "railway"),
+            "NAME": os.environ.get("MYSQLDATABASE", "railway"),
             "USER": os.environ.get("MYSQLUSER", "root"),
             "PASSWORD": os.environ.get("MYSQLPASSWORD", "sRvoRfqRvGqdUqMlStsfDxrmhWXQKfNH"),
             "HOST": os.environ.get("MYSQLHOST", "mysql.railway.internal"),
