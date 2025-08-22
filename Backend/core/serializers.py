@@ -1,10 +1,5 @@
-
-
-
-
 from rest_framework import serializers
 from .models import Room, Booking, CustomUser
-
 
 # --------------------------
 # Room Serializer
@@ -13,7 +8,6 @@ class RoomSerializer(serializers.ModelSerializer):
     class Meta:
         model = Room
         fields = '__all__'
-
 
 # --------------------------
 # Booking Serializer
@@ -30,6 +24,14 @@ class BookingSerializer(serializers.ModelSerializer):
             validated_data['user'] = request.user
         return super().create(validated_data)
 
+# --------------------------
+# Custom User Serializer
+# --------------------------
+class CustomUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CustomUser
+        fields = ['id', 'username', 'email', 'phone_number', 'first_name', 'last_name']
+        read_only_fields = ['id']
 
 # --------------------------
 # User Registration Serializer
@@ -42,7 +44,6 @@ class UserRegisterSerializer(serializers.ModelSerializer):
         fields = ['id', 'username', 'email', 'password']
 
     def create(self, validated_data):
-        # Always use create_user to ensure password hashing
         return CustomUser.objects.create_user(
             username=validated_data['username'],
             email=validated_data.get('email'),
