@@ -1,8 +1,5 @@
-# Make sure you're in the Backend directory
-
-# Create nixpacks.toml with the configuration
 [phases.setup]
-nixPkgs = ["python3", "pip"]
+nixPkgs = ["python3", "python3Packages.pip"]
 
 [phases.install]
 cmds = ["pip install -r requirements.txt"]
