@@ -12,4 +12,3 @@ cmds = ["python manage.py collectstatic --noinput"]
 
 [start]
 cmd = "gunicorn core.wsgi:application --bind 0.0.0.0:$PORT"
-EOF
