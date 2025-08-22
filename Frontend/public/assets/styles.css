@@ -448,50 +448,42 @@ header img {
     padding-bottom: 10vh;
 }
 .suites-main .suites-list {
-    gap: 8vh;
+    gap: 5vh;
 }
 .suite-inner {
-    background-color: white;
     width: 60%;
     border-radius: 10px;
-    padding: 30px;
     display: flex;
     gap: 5%;
 }
-.suite-inner h1, 
-.booking-page-suites h1 {
+.suite-inner h1{
     text-transform: uppercase;
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 32px;
 }
-.suite-inner .suite-img, 
-.booking-page-suites .suite-img {
+.suite-inner .suite-img {
     width: 400px;
     height: 45vh;
     border-radius: 15px;
     object-fit: cover;
 }
-.suite-inner .icons, 
-.booking-page-suites .icons {
+.suite-inner .icons {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 15px 0 30px 0;
 }
-.suite-inner .icons div, 
-.booking-page-suites .icons div {
+.suite-inner .icons div {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.suite-inner .icons div p , 
-.booking-page-suites .icons div p {
+.suite-inner .icons div p {
     font-size: 18px;
     margin: 0;
     font-weight: 600;
 }
-.suite-inner .info img, 
-.booking-page-suites .info img {
+.suite-inner .info img {
     width: 30px;
     height: 30px;
 }
@@ -501,14 +493,55 @@ header img {
     justify-content: end;
     margin-top: 25px;
 }
-.suite-inner .info,  
-.booking-page-suites .info  {
+.suite-inner .info {
     padding-top: 40px;
 }
 .suite-desc {
     width: 80%;
     font-size: 18px;
+    text-align: left;
 }
+
+/*-----------------------------------booking  */
+.main-booking-page {
+    padding: 15vh 10% 6vh 10%;
+}
+.booking-page-inner {
+    border: 1px solid black;
+    border-radius: 35px;
+    padding:   
+}
+.booking-details {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-bottom: 50px;
+}
+.booking-details div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.booking-details img {
+    width: 25px;
+    margin-right: 10px;
+}
+.booking-details input {
+    border: none; 
+    outline: none;
+
+}
+.booking-details h1 {
+    color: var(--mz-brown); 
+    font-size: 22px;
+    font-weight: bold;
+}
+.border-right {
+    border-right: 1px solid black;
+}
+
 
 @media (max-width: 768px) {
     .suite-inner {
