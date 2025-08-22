@@ -652,7 +652,84 @@ footer .details nav ul {
 /* ----------------payment-------------------- */
 .payment {
     background-color: var(--mz-blue-lighten);
-    padding: 15vh 10%;
+    padding: 13vh 10% 6vh 10%;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px 20px;
+    width: 80%;
+    margin-bottom: 28px;
+}
+.payment-method img {
+    width: 60px;
+    border-radius: 4px;
+}
+.payment-method p {
+    margin: 0;
+    font-size: 18px;
 }
 
 
+
+/* ----------------payment confirmation-------------------- */
+.confirmation-page {
+    background-color: var(--mz-blue-lighten);
+    padding: 10vh 10% 6vh 10%;
+}
+.pconfirm-details {
+    flex-direction: column;
+    padding: 0 25%;
+    margin-top: 9vh;
+}
+.pconfirm-details h1, p {
+    text-align: center;
+}
+.top-expense {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+}
+.top-expense h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+.top-expense p {
+    margin: 0;
+}
+.other-expenses {
+    background-color: white;
+    padding: 15px 20px; 
+    border-radius: 9px;
+    margin-bottom: 25px;
+}
+.other-expenses p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+.other-expenses h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+.momo-num input {
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 6px 10px;
+    border: 1px solid gray; 
+    outline: none;
+    background-color: white;
+    width: 300px;
+    margin-bottom: 40px;
+}
