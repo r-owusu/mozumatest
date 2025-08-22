@@ -1,4 +1,4 @@
-# 🏝️ Mozuma Oceanfront Suites
+# 🏝️ Mozuma Oceanfront Suites.
 
 **Software Engineering Group Project**  
 ---
