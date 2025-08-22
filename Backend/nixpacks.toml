@@ -1,0 +1,16 @@
+# Make sure you're in the Backend directory
+
+# Create nixpacks.toml with the configuration
+cat > nixpacks.toml << 'EOF'
+[phases.setup]
+nixPkgs = ["python3", "pip"]
+
+[phases.install]
+cmds = ["pip install -r requirements.txt"]
+
+[phases.build]
+cmds = ["python manage.py collectstatic --noinput"]
+
+[start]
+cmd = "gunicorn core.wsgi:application --bind 0.0.0.0:$PORT"
+EOF
