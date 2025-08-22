@@ -3,11 +3,14 @@ from django.conf import settings
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
-from django.shortcuts import render
 from rest_framework import generics, permissions
 from .models import Room, Booking, CustomUser
-from .serializers import RoomSerializer, BookingSerializer, UserRegisterSerializer
-
+from .serializers import (
+    RoomSerializer,
+    BookingSerializer,
+    UserRegisterSerializer,
+    CustomUserSerializer
+)
 
 # --------------------------
 # Stripe Payment Intent API
@@ -29,7 +32,6 @@ class CreatePaymentIntentView(APIView):
         except Exception as e:
             return Response({"error": str(e)}, status=400)
 
-
 # --------------------------
 # Rooms API
 # --------------------------
@@ -37,18 +39,24 @@ class RoomListAPIView(generics.ListAPIView):
     queryset = Room.objects.filter(available=True)
     serializer_class = RoomSerializer
 
-
 # --------------------------
 # Booking API
 # --------------------------
 class BookingCreateView(generics.CreateAPIView):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
-    permission_classes = [permissions.IsAuthenticated]  # Only logged-in users can book
+    permission_classes = [permissions.IsAuthenticated]
 
     def get_serializer_context(self):
-        return {'request': self.request}  # Pass request to serializer (to capture user)
+        return {'request': self.request}
 
+# --------------------------
+# User API (Admin Only)
+# --------------------------
+class UserListCreateAPIView(generics.ListCreateAPIView):
+    queryset = CustomUser.objects.all()
+    serializer_class = CustomUserSerializer
+    permission_classes = [permissions.IsAdminUser]
 
 # --------------------------
 # User Registration API
@@ -56,4 +64,4 @@ class BookingCreateView(generics.CreateAPIView):
 class UserRegisterView(generics.CreateAPIView):
     queryset = CustomUser.objects.all()
     serializer_class = UserRegisterSerializer
-    permission_classes = [permissions.AllowAny]  # Anyone can register
+    permission_classes = [permissions.AllowAny]
