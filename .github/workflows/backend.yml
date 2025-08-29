@@ -12,7 +12,7 @@ jobs:
   backend-tests:
     runs-on: ubuntu-latest
 
-    services:   # 👈 services should be inside the job, not outside
+    services:
       mysql:
         image: mysql:8.0
         env:
@@ -30,30 +30,27 @@ jobs:
 
     defaults:
       run:
-        working-directory: Backend  # All commands run from Backend folder
+        working-directory: Backend   # because manage.py is inside Backend/
 
     steps:
-      - name: Checkout Main branch
-        uses: actions/checkout@v4
-        with:
-          ref: Database  # Checkout the branch that contains the backend
+      - name: Checkout code
+        uses: actions/checkout@v4   # 👈 removed `ref: Database`
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install python-dotenv
-          pip install django-cors-headers mysqlclient
-
       - name: Install system dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y default-libmysqlclient-dev build-essential
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install python-dotenv django-cors-headers mysqlclient
 
       - name: Wait for MySQL to be ready
         run: |
@@ -63,13 +60,13 @@ jobs:
 
       - name: Grant all privileges to mozuma_user
         run: |
-             mysql -h127.0.0.1 -uroot -proot -e "GRANT ALL PRIVILEGES ON *.* TO 'mozuma_user'@'%'; FLUSH PRIVILEGES;"
+          mysql -h127.0.0.1 -uroot -proot -e "GRANT ALL PRIVILEGES ON *.* TO 'mozuma_user'@'%'; FLUSH PRIVILEGES;"
 
       - name: Run Django tests
         env:
           DJANGO_SETTINGS_MODULE: mozuma.settings
-          db_password: testpass   # 👈 matches MYSQL_PASSWORD above
-          db_host: 127.0.0.1      # force TCP
+          db_password: testpass
+          db_host: 127.0.0.1
           db_port: 3306
         run: |
           python manage.py test
