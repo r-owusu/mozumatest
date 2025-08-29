@@ -2,6 +2,17 @@ import React from 'react';
 import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 
+
+
+
+
+const WeddingsImg = '../../assets/images/events/wedding.png';
+const DinnerImg = '../../assets/images/events/dinner.png';
+const MovieImg = '../../assets/images/events/movie.png';
+const BirthdayImg = '../../assets/images/events/birthday.png';
+const ConferenceImg = '../../assets/images/events/conference.png';
+
+
 export default function Events() {
   const navigate = useNavigate();
 
@@ -11,35 +22,35 @@ export default function Events() {
       title: 'Weddings',
       description:
         'Whether you are planning a romantic dinner, or a beachside retreat, Mozuma Oceanfront Suite offers the perfect space. Breath-taking views, tailored service, and unforgettable moments await.',
-      img: '/assets/images/events/wedding.png',
+      img: WeddingsImg,
     },
     {
       id: 2,
       title: 'Dinner Nights',
       description:
         'Enjoy an intimate evening of curated menus and ocean breeze. A perfect setting for couples, families, and small groups to celebrate together.',
-      img: '/assets/images/events/dinner.png',
+      img: DinnerImg,
     },
     {
       id: 3,
       title: 'Movie Nights',
       description:
         'Cozy up in our private screening room for themed movie nights—popcorn included. Great for family nights, team building, and private previews.',
-      img: '/assets/images/events/movie.png',
+      img: MovieImg,
     },
     {
       id: 4,
       title: 'Birthday Bash',
       description:
         'Celebrate under the palms with a personalized setup, cake, and sunset views. From small gatherings to larger parties we make birthdays special.',
-      img: '/assets/images/events/birthday.png',
+      img: BirthdayImg,
     },
     {
       id: 5,
       title: 'Conference Meetings',
       description:
         'Professional meeting spaces with reliable AV, catering options and ocean views. Perfect for workshops, retreats and corporate gatherings.',
-      img: '/assets/images/events/conference.png',
+      img: ConferenceImg,
     },
   ];
 
@@ -52,7 +63,7 @@ export default function Events() {
         className="d-flex align-items-center justify-content-center text-center"
         style={{
           height: '60vh',
-          backgroundImage: "url('/assets/images/events/bgimg.jpg')",
+          backgroundImage: "url('../../assets/images/events/bgimg.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           position: 'relative',
@@ -80,10 +91,10 @@ export default function Events() {
         </div>
       </section>
 
-      {/* Events list */}
+      {/* Events list (scrollable by default) */}
       <main className="container py-5">
         <div className="row gy-5">
-          {events.map((e) => (
+          {events.map((e, idx) => (
             <div key={e.id} className="col-12">
               <div className="row align-items-center">
                 {/* image */}
@@ -100,17 +111,15 @@ export default function Events() {
 
                 {/* content */}
                 <div className="col-md-7">
-                  <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', marginBottom: '0.5rem' }}>
-                    {e.title}
-                  </h3>
+                  <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '28px', marginBottom: '0.5rem' }}>{e.title}</h3>
                   <p style={{ textAlign: 'justify', lineHeight: 1.7 }}>{e.description}</p>
 
                   <button
                     className="btn"
                     style={{ backgroundColor: '#BFF3F0', boxShadow: '4px 6px 0 rgba(0,0,0,0.12)' }}
-                    onClick={() => navigate(`/booking?event=${e.id}&title=${encodeURIComponent(e.title)}`)}
+                    onClick={() => navigate(`/events/${e.id}`)}
                   >
-                    Book Now
+                    View Details
                   </button>
                 </div>
               </div>

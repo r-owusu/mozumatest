@@ -21,7 +21,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://mozuma-oceanfront-suites-beyin-production.up.railway.app/api/register/", {
+      const response = await fetch("http://localhost:8000/api/api/register/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
