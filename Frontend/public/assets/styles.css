@@ -22,7 +22,6 @@
 a {
     text-decoration: none;
 }
-
 button, .suite-button a, .linkButton {
     background-color: var(--mz-blue);
     color: var(--mz-white);
@@ -709,6 +708,8 @@ footer .details nav ul {
     color: black;
     margin-bottom: 25px;
 }
+
+/* ------------------booking page------------------- */
 .main-booking-page {
     background-color: var(--mz-blue-lighten);
     display: flex;
@@ -813,3 +814,5 @@ footer .details nav ul {
 .pconfirm-page img {
     width: 50px;
 }
+
+
